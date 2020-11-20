@@ -80,6 +80,8 @@
 				03BB09302567F29900063F69 /* Sources */,
 				03BB09312567F29900063F69 /* Frameworks */,
 				03BB09322567F29900063F69 /* Resources */,
+				03BB09542567F8EA00063F69 /* Swift lint */,
+				03BB09572567FCEB00063F69 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -134,6 +136,44 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03BB09542567F8EA00063F69 /* Swift lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift lint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [ \"${CONFIGURATION}\" = \"Debug\" ]; then\nif which swiftlint >/dev/null; then\nswiftlint --config \"$SRCROOT/.swiftlint.yml\"\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\nfi\n";
+		};
+		03BB09572567FCEB00063F69 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#!/bin/bash\n\nset -e\n\ndefaults write com.apple.dt.Xcode DVTTextEditorTrimTrailingWhitespace -bool YES\ndefaults write com.apple.dt.Xcode DVTTextEditorTrimWhitespaceOnlyLines -bool YES\n\ndefaults write com.apple.dt.Xcode DVTTextIndentTabWidth -int 2\ndefaults write com.apple.dt.Xcode DVTTextIndentWidth -int 2\n\ndefaults write com.apple.dt.Xcode DVTTextPageGuideLocation -int 100\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		03BB09302567F29900063F69 /* Sources */ = {
