@@ -14,6 +14,7 @@
 		03BB09422567F29900063F69 /* Make_it_Great.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03BB09402567F29900063F69 /* Make_it_Great.xcdatamodeld */; };
 		03BB09442567F29B00063F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BB09432567F29B00063F69 /* Assets.xcassets */; };
 		03BB09472567F29B00063F69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03BB09452567F29B00063F69 /* LaunchScreen.storyboard */; };
+		03BB096A256C02A400063F69 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 03BB0969256C02A400063F69 /* .gitkeep */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,12 @@
 		03BB09432567F29B00063F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03BB09462567F29B00063F69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03BB09482567F29B00063F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03BB0969256C02A400063F69 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		03BB096D256C03A000063F69 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		03BB096E256C03A100063F69 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		03BB096F256C03A300063F69 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		03BB0970256C03A800063F69 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		03BB0971256C03A900063F69 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +65,78 @@
 		03BB09362567F29900063F69 /* Make it Great */ = {
 			isa = PBXGroup;
 			children = (
+				03BB0960256C017200063F69 /* Protocols */,
+				03BB095F256C016900063F69 /* Extensions */,
+				03BB095E256C015B00063F69 /* Persistence */,
+				03BB095D256C013E00063F69 /* View */,
+				03BB095C256C013500063F69 /* Presenter */,
+				03BB095B256C012B00063F69 /* Model */,
 				03BB09372567F29900063F69 /* AppDelegate.swift */,
 				03BB09392567F29900063F69 /* SceneDelegate.swift */,
-				03BB093B2567F29900063F69 /* ViewController.swift */,
-				03BB093D2567F29900063F69 /* Main.storyboard */,
-				03BB09432567F29B00063F69 /* Assets.xcassets */,
 				03BB09452567F29B00063F69 /* LaunchScreen.storyboard */,
+				03BB09432567F29B00063F69 /* Assets.xcassets */,
 				03BB09482567F29B00063F69 /* Info.plist */,
 				03BB09402567F29900063F69 /* Make_it_Great.xcdatamodeld */,
 			);
 			path = "Make it Great";
+			sourceTree = "<group>";
+		};
+		03BB095B256C012B00063F69 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03BB0971256C03A900063F69 /* .gitkeep */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		03BB095C256C013500063F69 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				03BB0970256C03A800063F69 /* .gitkeep */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		03BB095D256C013E00063F69 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03BB093B2567F29900063F69 /* ViewController.swift */,
+				03BB093D2567F29900063F69 /* Main.storyboard */,
+				03BB0962256C01BE00063F69 /* Components */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		03BB095E256C015B00063F69 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				03BB096E256C03A100063F69 /* .gitkeep */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		03BB095F256C016900063F69 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				03BB096D256C03A000063F69 /* .gitkeep */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		03BB0960256C017200063F69 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				03BB0969256C02A400063F69 /* .gitkeep */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		03BB0962256C01BE00063F69 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				03BB096F256C03A300063F69 /* .gitkeep */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,6 +201,7 @@
 				03BB09472567F29B00063F69 /* LaunchScreen.storyboard in Resources */,
 				03BB09442567F29B00063F69 /* Assets.xcassets in Resources */,
 				03BB093F2567F29900063F69 /* Main.storyboard in Resources */,
+				03BB096A256C02A400063F69 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
