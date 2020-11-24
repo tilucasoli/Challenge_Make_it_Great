@@ -16,6 +16,7 @@
 		03BB09472567F29B00063F69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03BB09452567F29B00063F69 /* LaunchScreen.storyboard */; };
 		03BB096A256C02A400063F69 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 03BB0969256C02A400063F69 /* .gitkeep */; };
 		03BB09A9256D334C00063F69 /* Make_it_GreatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB09A8256D334C00063F69 /* Make_it_GreatTests.swift */; };
+		03BB09B5256D43E900063F69 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB09B4256D43E900063F69 /* Activity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		03BB09A6256D334C00063F69 /* Make it GreatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Make it GreatTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03BB09A8256D334C00063F69 /* Make_it_GreatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Make_it_GreatTests.swift; sourceTree = "<group>"; };
 		03BB09AA256D334C00063F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03BB09B4256D43E900063F69 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				03BB0971256C03A900063F69 /* .gitkeep */,
+				03BB09B4256D43E900063F69 /* Activity.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03BB09B5256D43E900063F69 /* Activity.swift in Sources */,
 				03BB093C2567F29900063F69 /* ViewController.swift in Sources */,
 				03BB09382567F29900063F69 /* AppDelegate.swift in Sources */,
 				03BB09422567F29900063F69 /* Make_it_Great.xcdatamodeld in Sources */,
