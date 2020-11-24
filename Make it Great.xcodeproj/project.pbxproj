@@ -15,8 +15,22 @@
 		03BB09442567F29B00063F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BB09432567F29B00063F69 /* Assets.xcassets */; };
 		03BB09472567F29B00063F69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03BB09452567F29B00063F69 /* LaunchScreen.storyboard */; };
 		03BB096A256C02A400063F69 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 03BB0969256C02A400063F69 /* .gitkeep */; };
+<<<<<<< HEAD
 		DEBBFA20256D3ABF004669A1 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBBFA1F256D3ABF004669A1 /* Activity.swift */; };
+=======
+		03BB09A9256D334C00063F69 /* Make_it_GreatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB09A8256D334C00063F69 /* Make_it_GreatTests.swift */; };
+>>>>>>> ab873bc582f998eef70256cba2f90c92afa954b2
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03BB09AB256D334C00063F69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03BB092C2567F29900063F69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03BB09332567F29900063F69;
+			remoteInfo = "Make it Great";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		03BB09342567F29900063F69 /* Make it Great.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Make it Great.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,11 +48,24 @@
 		03BB096F256C03A300063F69 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		03BB0970256C03A800063F69 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		03BB0971256C03A900063F69 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		DEBBFA1F256D3ABF004669A1 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+=======
+		03BB09A6256D334C00063F69 /* Make it GreatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Make it GreatTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03BB09A8256D334C00063F69 /* Make_it_GreatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Make_it_GreatTests.swift; sourceTree = "<group>"; };
+		03BB09AA256D334C00063F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+>>>>>>> ab873bc582f998eef70256cba2f90c92afa954b2
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		03BB09312567F29900063F69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03BB09A3256D334C00063F69 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -52,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				03BB09362567F29900063F69 /* Make it Great */,
+				03BB09A7256D334C00063F69 /* Make it GreatTests */,
 				03BB09352567F29900063F69 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				03BB09342567F29900063F69 /* Make it Great.app */,
+				03BB09A6256D334C00063F69 /* Make it GreatTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -142,6 +171,15 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		03BB09A7256D334C00063F69 /* Make it GreatTests */ = {
+			isa = PBXGroup;
+			children = (
+				03BB09A8256D334C00063F69 /* Make_it_GreatTests.swift */,
+				03BB09AA256D334C00063F69 /* Info.plist */,
+			);
+			path = "Make it GreatTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,6 +202,24 @@
 			productReference = 03BB09342567F29900063F69 /* Make it Great.app */;
 			productType = "com.apple.product-type.application";
 		};
+		03BB09A5256D334C00063F69 /* Make it GreatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03BB09AD256D334C00063F69 /* Build configuration list for PBXNativeTarget "Make it GreatTests" */;
+			buildPhases = (
+				03BB09A2256D334C00063F69 /* Sources */,
+				03BB09A3256D334C00063F69 /* Frameworks */,
+				03BB09A4256D334C00063F69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03BB09AC256D334C00063F69 /* PBXTargetDependency */,
+			);
+			name = "Make it GreatTests";
+			productName = "Make it GreatTests";
+			productReference = 03BB09A6256D334C00063F69 /* Make it GreatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -175,6 +231,10 @@
 				TargetAttributes = {
 					03BB09332567F29900063F69 = {
 						CreatedOnToolsVersion = 12.2;
+					};
+					03BB09A5256D334C00063F69 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 03BB09332567F29900063F69;
 					};
 				};
 			};
@@ -192,6 +252,7 @@
 			projectRoot = "";
 			targets = (
 				03BB09332567F29900063F69 /* Make it Great */,
+				03BB09A5256D334C00063F69 /* Make it GreatTests */,
 			);
 		};
 /* End PBXProject section */
@@ -205,6 +266,13 @@
 				03BB09442567F29B00063F69 /* Assets.xcassets in Resources */,
 				03BB093F2567F29900063F69 /* Main.storyboard in Resources */,
 				03BB096A256C02A400063F69 /* .gitkeep in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03BB09A4256D334C00063F69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +329,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		03BB09A2256D334C00063F69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03BB09A9256D334C00063F69 /* Make_it_GreatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03BB09AC256D334C00063F69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03BB09332567F29900063F69 /* Make it Great */;
+			targetProxy = 03BB09AB256D334C00063F69 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		03BB093D2567F29900063F69 /* Main.storyboard */ = {
@@ -437,6 +521,46 @@
 			};
 			name = Release;
 		};
+		03BB09AE256D334C00063F69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62NRBAKMQ3;
+				INFOPLIST_FILE = "Make it GreatTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Apple-academy.Make-it-GreatTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Make it Great.app/Make it Great";
+			};
+			name = Debug;
+		};
+		03BB09AF256D334C00063F69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62NRBAKMQ3;
+				INFOPLIST_FILE = "Make it GreatTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Apple-academy.Make-it-GreatTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Make it Great.app/Make it Great";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -454,6 +578,15 @@
 			buildConfigurations = (
 				03BB094C2567F29B00063F69 /* Debug */,
 				03BB094D2567F29B00063F69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03BB09AD256D334C00063F69 /* Build configuration list for PBXNativeTarget "Make it GreatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03BB09AE256D334C00063F69 /* Debug */,
+				03BB09AF256D334C00063F69 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
