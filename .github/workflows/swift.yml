@@ -18,7 +18,7 @@ jobs:
       uses: actions/checkout@master
     - name: Build and Test
       run: |
-        xcodebuild clean test -project Challenge_Make_it_Great.xcodeproj -scheme Challenge_Make_it_Great -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
+        xcodebuild clean test -project "Challenge Make it Great.xcodeproj" -scheme "Challenge Make it Great" -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
         bash <(curl -s https://codecov.io/bash)
         coverage Test.xcresult Coverage --threshold=0.6
       env: 
