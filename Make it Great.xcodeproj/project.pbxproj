@@ -17,8 +17,6 @@
 		03BB096A256C02A400063F69 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 03BB0969256C02A400063F69 /* .gitkeep */; };
 		03BB09A9256D334C00063F69 /* Make_it_GreatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB09A8256D334C00063F69 /* Make_it_GreatTests.swift */; };
 		03BB09B5256D43E900063F69 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB09B4256D43E900063F69 /* Activity.swift */; };
-		03BB09C1256D4C3100063F69 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 03BB09C0256D4C3100063F69 /* .travis.yml */; };
-		03BB09C5256D4C8000063F69 /* .slather.yml in Resources */ = {isa = PBXBuildFile; fileRef = 03BB09C4256D4C8000063F69 /* .slather.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +49,6 @@
 		03BB09A8256D334C00063F69 /* Make_it_GreatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Make_it_GreatTests.swift; sourceTree = "<group>"; };
 		03BB09AA256D334C00063F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03BB09B4256D43E900063F69 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
-		03BB09C0256D4C3100063F69 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .travis.yml; sourceTree = "<group>"; };
-		03BB09C4256D4C8000063F69 /* .slather.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .slather.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +72,6 @@
 		03BB092B2567F29900063F69 = {
 			isa = PBXGroup;
 			children = (
-				03BB09C0256D4C3100063F69 /* .travis.yml */,
-				03BB09C4256D4C8000063F69 /* .slather.yml */,
 				03BB09362567F29900063F69 /* Make it Great */,
 				03BB09A7256D334C00063F69 /* Make it GreatTests */,
 				03BB09352567F29900063F69 /* Products */,
@@ -262,10 +256,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03BB09C1256D4C3100063F69 /* .travis.yml in Resources */,
 				03BB09472567F29B00063F69 /* LaunchScreen.storyboard in Resources */,
 				03BB09442567F29B00063F69 /* Assets.xcassets in Resources */,
-				03BB09C5256D4C8000063F69 /* .slather.yml in Resources */,
 				03BB093F2567F29900063F69 /* Main.storyboard in Resources */,
 				03BB096A256C02A400063F69 /* .gitkeep in Resources */,
 			);
