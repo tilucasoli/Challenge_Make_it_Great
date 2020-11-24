@@ -20,6 +20,6 @@ jobs:
       run: |
         xcodebuild clean test -project "Make it Great.xcodeproj" -scheme "Make it Great" -destination "${destination}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO
         bash <(curl -s https://codecov.io/bash)
-        coverage Test.xcresult Coverage --threshold=0.6
+        
       env: 
         destination: ${{ matrix.destination }}
