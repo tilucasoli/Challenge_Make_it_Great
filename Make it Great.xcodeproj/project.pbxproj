@@ -18,6 +18,9 @@
 		03BB0A06256DA5C600063F69 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB0A05256DA5C600063F69 /* UILabel.swift */; };
 		03BB0A26256DE64C00063F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BB0A25256DE64C00063F69 /* Assets.xcassets */; };
 		03BB0A2A256DE6FD00063F69 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB0A29256DE6FD00063F69 /* CustomNavigationController.swift */; };
+		DE3B4F63256E84C0005FFD01 /* HumorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B4F62256E84C0005FFD01 /* HumorViewController.swift */; };
+		DE3B4F67256E88EA005FFD01 /* ChooseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B4F66256E88EA005FFD01 /* ChooseCard.swift */; };
+		DE3B4F6B256E8E78005FFD01 /* HumorContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B4F6A256E8E78005FFD01 /* HumorContent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		03BB0A05256DA5C600063F69 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		03BB0A25256DE64C00063F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03BB0A29256DE6FD00063F69 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		DE3B4F62256E84C0005FFD01 /* HumorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumorViewController.swift; sourceTree = "<group>"; };
+		DE3B4F66256E88EA005FFD01 /* ChooseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCard.swift; sourceTree = "<group>"; };
+		DE3B4F6A256E8E78005FFD01 /* HumorContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumorContent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +138,7 @@
 			children = (
 				03BB09E9256D94E900063F69 /* Templates */,
 				03BB0962256C01BE00063F69 /* Components */,
+				DE3B4F62256E84C0005FFD01 /* HumorViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,6 +173,8 @@
 			children = (
 				03BB0A29256DE6FD00063F69 /* CustomNavigationController.swift */,
 				03BB096F256C03A300063F69 /* .gitkeep */,
+				DE3B4F66256E88EA005FFD01 /* ChooseCard.swift */,
+				DE3B4F6A256E8E78005FFD01 /* HumorContent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -338,9 +347,12 @@
 				03BB09382567F29900063F69 /* AppDelegate.swift in Sources */,
 				03BB0A06256DA5C600063F69 /* UILabel.swift in Sources */,
 				03BB09EB256D951700063F69 /* FormTemplateViewController.swift in Sources */,
+				DE3B4F67256E88EA005FFD01 /* ChooseCard.swift in Sources */,
 				03BB09F3256D9E1500063F69 /* UIColor.swift in Sources */,
 				03BB09422567F29900063F69 /* Make_it_Great.xcdatamodeld in Sources */,
 				03BB093A2567F29900063F69 /* SceneDelegate.swift in Sources */,
+				DE3B4F6B256E8E78005FFD01 /* HumorContent.swift in Sources */,
+				DE3B4F63256E84C0005FFD01 /* HumorViewController.swift in Sources */,
 				03BB0A2A256DE6FD00063F69 /* CustomNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
