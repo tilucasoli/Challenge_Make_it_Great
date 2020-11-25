@@ -10,13 +10,14 @@
 		03BB09382567F29900063F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB09372567F29900063F69 /* AppDelegate.swift */; };
 		03BB093A2567F29900063F69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB09392567F29900063F69 /* SceneDelegate.swift */; };
 		03BB09422567F29900063F69 /* Make_it_Great.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03BB09402567F29900063F69 /* Make_it_Great.xcdatamodeld */; };
-		03BB09442567F29B00063F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BB09432567F29B00063F69 /* Assets.xcassets */; };
 		03BB09472567F29B00063F69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03BB09452567F29B00063F69 /* LaunchScreen.storyboard */; };
 		03BB09A9256D334C00063F69 /* Make_it_GreatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB09A8256D334C00063F69 /* Make_it_GreatTests.swift */; };
 		03BB09EB256D951700063F69 /* FormTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB09EA256D951700063F69 /* FormTemplateViewController.swift */; };
 		03BB09F3256D9E1500063F69 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB09F2256D9E1500063F69 /* UIColor.swift */; };
 		03BB09FB256DA16C00063F69 /* Brown-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03BB09FA256DA16C00063F69 /* Brown-Bold.ttf */; };
 		03BB0A06256DA5C600063F69 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB0A05256DA5C600063F69 /* UILabel.swift */; };
+		03BB0A26256DE64C00063F69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03BB0A25256DE64C00063F69 /* Assets.xcassets */; };
+		03BB0A2A256DE6FD00063F69 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB0A29256DE6FD00063F69 /* CustomNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,7 +35,6 @@
 		03BB09372567F29900063F69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03BB09392567F29900063F69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		03BB09412567F29900063F69 /* Make_it_Great.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Make_it_Great.xcdatamodel; sourceTree = "<group>"; };
-		03BB09432567F29B00063F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03BB09462567F29B00063F69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03BB09482567F29B00063F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03BB096D256C03A000063F69 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		03BB09F2256D9E1500063F69 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		03BB09FA256DA16C00063F69 /* Brown-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Brown-Bold.ttf"; sourceTree = "<group>"; };
 		03BB0A05256DA5C600063F69 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		03BB0A25256DE64C00063F69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		03BB0A29256DE6FD00063F69 /* CustomNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +78,9 @@
 				03BB09A7256D334C00063F69 /* Make it GreatTests */,
 				03BB09352567F29900063F69 /* Products */,
 			);
+			indentWidth = 4;
 			sourceTree = "<group>";
+			tabWidth = 4;
 		};
 		03BB09352567F29900063F69 /* Products */ = {
 			isa = PBXGroup;
@@ -100,7 +104,7 @@
 				03BB09372567F29900063F69 /* AppDelegate.swift */,
 				03BB09392567F29900063F69 /* SceneDelegate.swift */,
 				03BB09452567F29B00063F69 /* LaunchScreen.storyboard */,
-				03BB09432567F29B00063F69 /* Assets.xcassets */,
+				03BB0A25256DE64C00063F69 /* Assets.xcassets */,
 				03BB09482567F29B00063F69 /* Info.plist */,
 				03BB09402567F29900063F69 /* Make_it_Great.xcdatamodeld */,
 			);
@@ -160,6 +164,7 @@
 		03BB0962256C01BE00063F69 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				03BB0A29256DE6FD00063F69 /* CustomNavigationController.swift */,
 				03BB096F256C03A300063F69 /* .gitkeep */,
 			);
 			path = Components;
@@ -273,7 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03BB09472567F29B00063F69 /* LaunchScreen.storyboard in Resources */,
-				03BB09442567F29B00063F69 /* Assets.xcassets in Resources */,
+				03BB0A26256DE64C00063F69 /* Assets.xcassets in Resources */,
 				03BB09FB256DA16C00063F69 /* Brown-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +341,7 @@
 				03BB09F3256D9E1500063F69 /* UIColor.swift in Sources */,
 				03BB09422567F29900063F69 /* Make_it_Great.xcdatamodeld in Sources */,
 				03BB093A2567F29900063F69 /* SceneDelegate.swift in Sources */,
+				03BB0A2A256DE6FD00063F69 /* CustomNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
