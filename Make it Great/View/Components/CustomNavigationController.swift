@@ -34,10 +34,14 @@ class CustomNavigationController: UINavigationController {
     }
 
     func setupVisualNavigationController() {
-        navigationBar.backIndicatorImage = UIImage(named: "back button")
+
+        let image = UIImage(systemName: "arrow.left")
+        navigationBar.backIndicatorImage = image
+        navigationBar.backIndicatorTransitionMaskImage = image
 
         navigationBar.isTranslucent = false
         navigationBar.barTintColor = .grayOne
+        navigationBar.tintColor = .green
 
         // Remove the separator, line below the UINavigationController
         navigationBar.shadowImage = UIImage()
