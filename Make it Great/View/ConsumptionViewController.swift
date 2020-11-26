@@ -18,6 +18,10 @@ class ConsumptionViewController: FormTemplateViewController {
         consumptionContent.cleanCard.delegate = self
         consumptionContent.fewCard.delegate = self
         consumptionContent.lotCard.delegate = self
+
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
 }
 
