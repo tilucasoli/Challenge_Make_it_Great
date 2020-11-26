@@ -20,14 +20,15 @@ class MonitoringStatus: UIView {
         let label = UILabel()
         label.text = "Parabéns! Você está limpo há"
         label.font = UIFont.systemFont(ofSize: 16)
-        //label.textColor = .gray
+        label.textColor = .grayFive
         return label
     }()
 
     lazy var daysLabel: UILabel = {
         let label = UILabel()
         label.text = "7 dias"
-        label.font = UIFont.systemFont(ofSize: 27)
+        label.font = UIFont(name: "Brown-Bold", size: 27)
+        label.textColor = .grayFive
         return label
     }()
 
@@ -67,7 +68,7 @@ extension MonitoringStatus {
 
         daysLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            daysLabel.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: -5),
+            daysLabel.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 6),
             daysLabel.leftAnchor.constraint(equalTo: emojiLabel.rightAnchor, constant: 21),
             daysLabel.rightAnchor.constraint(equalTo: self.rightAnchor)
         ])

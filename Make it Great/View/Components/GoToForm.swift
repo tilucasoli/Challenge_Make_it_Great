@@ -12,7 +12,8 @@ class GoToForm: UIView {
     lazy var labelTitle: UILabel = {
         let label = UILabel()
         label.text = "Tudo Bom?"
-        label.font = UIFont.systemFont(ofSize: 27)
+        label.font = UIFont(name: "Brown-Bold", size: 24)
+        label.textColor = .grayFive
         return label
     }()
 
@@ -21,6 +22,7 @@ class GoToForm: UIView {
         label.numberOfLines = 0
         label.text = "Percebemos que os dados diários ainda não foram inseridos, lembre-se você não está sozinho."
         label.font = UIFont.systemFont(ofSize: 16)
+        label.textColor = .grayFive
         return label
     }()
 

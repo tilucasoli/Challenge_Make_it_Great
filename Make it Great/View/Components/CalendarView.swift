@@ -27,7 +27,7 @@ class CalendarView: UIView {
         super.init(frame: frame)
         calendarCollection.calendarDelegate = self
         calendarCollection.calendarDataSource = self
-        
+        calendarCollection.backgroundColor = .grayOne
         calendarCollection.register(DateCell.self, forCellWithReuseIdentifier: "dateCell")
 
         setupMonthLabel()

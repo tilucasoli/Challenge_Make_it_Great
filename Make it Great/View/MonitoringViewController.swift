@@ -11,9 +11,9 @@ class MonitoringViewController: UIViewController {
 
     let userName: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 32, weight: .bold)
-        label.textColor = .green
-        label.text = "Olá John"
+        label.font = UIFont(name: "Brown-Bold", size: 32)
+        label.textColor = .grayThree
+        label.text = "Olá John!"
         return label
     }()
 
@@ -23,7 +23,8 @@ class MonitoringViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = .grayOne
+        navigationController?.navigationBar.isHidden = true
 
         setupUserName()
         setupCalendarView()
@@ -36,7 +37,7 @@ class MonitoringViewController: UIViewController {
         userName.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            userName.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32),
+            userName.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 56),
             userName.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
         ])
     }
