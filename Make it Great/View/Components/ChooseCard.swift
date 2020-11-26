@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol CardDelegate {
+    func cardAction(title: String)
+}
+
 class ChooseCard: UIView {
 
     lazy var emojiView: UIView = {
@@ -28,6 +32,8 @@ class ChooseCard: UIView {
         return label
     }()
 
+    var delegate: CardDelegate? = nil
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .white
@@ -39,10 +45,19 @@ class ChooseCard: UIView {
         self.setUpEmojiView()
         self.setUpEmojiLabel()
         self.setUpCardTitle()
+
+        self.isUserInteractionEnabled = true
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(cardAction))
+        self.addGestureRecognizer(gestureRecognizer)
     }
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    @objc func cardAction() {
+        //print("Clicou no card \(self.cardTitle.text!)!")
+        self.delegate?.cardAction(title: self.cardTitle.text!)
     }
 
     override func layoutSubviews() {

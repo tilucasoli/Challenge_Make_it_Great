@@ -14,5 +14,15 @@ class ConsumptionViewController: FormTemplateViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addAnswerContent(contentView: consumptionContent)
+
+        consumptionContent.cleanCard.delegate = self
+        consumptionContent.fewCard.delegate = self
+        consumptionContent.lotCard.delegate = self
+    }
+}
+
+extension ConsumptionViewController: CardDelegate {
+    func cardAction(title: String) {
+        print(title)
     }
 }
