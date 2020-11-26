@@ -59,7 +59,6 @@ extension GoToForm {
         NSLayoutConstraint.activate([
             labelTitle.topAnchor.constraint(equalTo: self.topAnchor),
             labelTitle.leftAnchor.constraint(equalTo: self.leftAnchor),
-            labelTitle.rightAnchor.constraint(equalTo: self.rightAnchor)
         ])
 
         labelDescription.translatesAutoresizingMaskIntoConstraints = false

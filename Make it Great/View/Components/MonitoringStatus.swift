@@ -12,6 +12,7 @@ class MonitoringStatus: UIView {
     lazy var emojiLabel: UILabel = {
         let label = UILabel()
         label.text = "🥳"
+        label.font = UIFont.systemFont(ofSize: 27)
         return label
     }()
 
@@ -53,8 +54,8 @@ extension MonitoringStatus {
         NSLayoutConstraint.activate([
             emojiLabel.leftAnchor.constraint(equalTo: self.leftAnchor),
             emojiLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            emojiLabel.widthAnchor.constraint(equalToConstant: 27),
-            emojiLabel.heightAnchor.constraint(equalTo: emojiLabel.widthAnchor)
+            emojiLabel.widthAnchor.constraint(equalToConstant: 35),
+            emojiLabel.heightAnchor.constraint(equalToConstant: 35)
         ])
 
         messageLabel.translatesAutoresizingMaskIntoConstraints = false

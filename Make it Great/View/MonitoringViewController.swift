@@ -9,30 +9,70 @@ import UIKit
 
 class MonitoringViewController: UIViewController {
 
+    let userName: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 32, weight: .bold)
+        label.textColor = .green
+        label.text = "Olá John"
+        return label
+    }()
+
+    let calendarView = CalendarView()
+    let monitoringStatus = MonitoringStatus()
+    let goToForm = GoToForm()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
 
-        let calendarView = CalendarView()
+        setupUserName()
+        setupCalendarView()
+        setupMonitoringStatus()
+        setupGoToForm()
+    }
+
+    func setupUserName() {
+        view.addSubview(userName)
+        userName.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            userName.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32),
+            userName.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
+        ])
+    }
+
+    func setupCalendarView() {
         view.addSubview(calendarView)
         calendarView.translatesAutoresizingMaskIntoConstraints = false
-        calendarView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        calendarView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        calendarView.heightAnchor.constraint(equalToConstant: 227).isActive = true
-        calendarView.widthAnchor.constraint(equalToConstant: 306).isActive = true
 
-        calendarView.calendarCollection.backgroundColor = .white
-        view.backgroundColor = .white
-        // Do any additional setup after loading the view.
+        NSLayoutConstraint.activate([
+            calendarView.topAnchor.constraint(equalTo: userName.bottomAnchor, constant: 16),
+            calendarView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
+            calendarView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -34),
+            calendarView.heightAnchor.constraint(equalToConstant: 267)
+        ])
     }
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupMonitoringStatus() {
+        view.addSubview(monitoringStatus)
+        monitoringStatus.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            monitoringStatus.topAnchor.constraint(equalTo: calendarView.bottomAnchor, constant: 24),
+            monitoringStatus.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
+            monitoringStatus.heightAnchor.constraint(equalToConstant: 51)
+        ])
     }
-    */
+
+    func setupGoToForm() {
+        view.addSubview(goToForm)
+        goToForm.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            goToForm.topAnchor.constraint(equalTo: monitoringStatus.bottomAnchor, constant: 40),
+            goToForm.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
+            goToForm.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20)
+        ])
+    }
 
 }
