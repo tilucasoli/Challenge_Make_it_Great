@@ -16,8 +16,16 @@ class DateCell: JTACDayCell {
         return label
     }()
 
+    private let selectedDateView: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 5
+        view.backgroundColor = .green
+        return view
+    }()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
+//        setupSelectedDateView()
         setupDayLabel()
     }
 
@@ -25,7 +33,7 @@ class DateCell: JTACDayCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setupDayLabel() {
+    private func setupDayLabel() {
         addSubview(dayLabel)
         dayLabel.translatesAutoresizingMaskIntoConstraints = false
 
@@ -34,4 +42,17 @@ class DateCell: JTACDayCell {
             dayLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
+
+    private func setupSelectedDateView() {
+        addSubview(selectedDateView)
+        selectedDateView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            selectedDateView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            selectedDateView.centerYAnchor.constraint(equalTo: centerYAnchor),
+            selectedDateView.heightAnchor.constraint(equalToConstant: 36),
+            selectedDateView.widthAnchor.constraint(equalToConstant: 36)
+        ])
+    }
+    
 }

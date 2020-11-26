@@ -10,6 +10,16 @@ import JTAppleCalendar
 // JTAppleCalendar has a behavior like collection view
 
 class CalendarView: UIView {
+
+    let monthLabel: UILabel = {
+        let label = UILabel()
+        label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
+        label.textColor = .green
+        label.text = "November"
+        return label
+    }()
+
+    let stackWeekLabels = StackWeekLabel()
     let calendarCollection = JTACMonthView()
     let formatter = DateFormatter()
 
@@ -17,8 +27,11 @@ class CalendarView: UIView {
         super.init(frame: frame)
         calendarCollection.calendarDelegate = self
         calendarCollection.calendarDataSource = self
+
         calendarCollection.register(DateCell.self, forCellWithReuseIdentifier: "dateCell")
 
+        setupMonthLabel()
+        setupStackWeekLabel()
         setupCalendarView()
     }
 
@@ -26,17 +39,39 @@ class CalendarView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    func setupMonthLabel() {
+        addSubview(monthLabel)
+        monthLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            monthLabel.topAnchor.constraint(equalTo: topAnchor),
+            monthLabel.leftAnchor.constraint(equalTo: leftAnchor)
+        ])
+    }
+
+    func setupStackWeekLabel() {
+        addSubview(stackWeekLabels)
+        stackWeekLabels.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            stackWeekLabels.topAnchor.constraint(equalTo: monthLabel.bottomAnchor, constant: 16),
+            stackWeekLabels.rightAnchor.constraint(equalTo: rightAnchor),
+            stackWeekLabels.leftAnchor.constraint(equalTo: leftAnchor, constant: 4)
+        ])
+    }
+
     func setupCalendarView() {
         addSubview(calendarCollection)
         calendarCollection.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            calendarCollection.topAnchor.constraint(equalTo: topAnchor),
+            calendarCollection.topAnchor.constraint(equalTo: stackWeekLabels.bottomAnchor, constant: 13),
             calendarCollection.rightAnchor.constraint(equalTo: rightAnchor),
-            calendarCollection.leftAnchor.constraint(equalTo: leftAnchor),
+            calendarCollection.leftAnchor.constraint(equalTo: leftAnchor, constant: 4),
             calendarCollection.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
+
 }
 
 extension CalendarView: JTACMonthViewDelegate{
