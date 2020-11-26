@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,10 @@
 		03BB09472567F29B00063F69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03BB09452567F29B00063F69 /* LaunchScreen.storyboard */; };
 		03BB096A256C02A400063F69 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 03BB0969256C02A400063F69 /* .gitkeep */; };
 		03BB09A9256D334C00063F69 /* Make_it_GreatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB09A8256D334C00063F69 /* Make_it_GreatTests.swift */; };
-		03BB09D5256D802600063F69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB09D4256D802600063F69 /* ViewController.swift */; };
+		03BB09D5256D802600063F69 /* MonitoringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB09D4256D802600063F69 /* MonitoringViewController.swift */; };
+		03BB0A32256EDC0900063F69 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB0A31256EDC0900063F69 /* CalendarView.swift */; };
+		03BB0A3B256EE2B400063F69 /* JTAppleCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 03BB0A3A256EE2B400063F69 /* JTAppleCalendar */; };
+		03BB0A40256EEAB000063F69 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB0A3F256EEAB000063F69 /* DateCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +47,9 @@
 		03BB09A6256D334C00063F69 /* Make it GreatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Make it GreatTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03BB09A8256D334C00063F69 /* Make_it_GreatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Make_it_GreatTests.swift; sourceTree = "<group>"; };
 		03BB09AA256D334C00063F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		03BB09D4256D802600063F69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		03BB09D4256D802600063F69 /* MonitoringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringViewController.swift; sourceTree = "<group>"; };
+		03BB0A31256EDC0900063F69 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		03BB0A3F256EEAB000063F69 /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03BB0A3B256EE2B400063F69 /* JTAppleCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,7 +78,9 @@
 				03BB09A7256D334C00063F69 /* Make it GreatTests */,
 				03BB09352567F29900063F69 /* Products */,
 			);
+			indentWidth = 4;
 			sourceTree = "<group>";
+			tabWidth = 4;
 		};
 		03BB09352567F29900063F69 /* Products */ = {
 			isa = PBXGroup;
@@ -121,7 +129,7 @@
 		03BB095D256C013E00063F69 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				03BB09D4256D802600063F69 /* ViewController.swift */,
+				03BB09D4256D802600063F69 /* MonitoringViewController.swift */,
 				03BB0962256C01BE00063F69 /* Components */,
 			);
 			path = View;
@@ -155,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				03BB096F256C03A300063F69 /* .gitkeep */,
+				03BB0A31256EDC0900063F69 /* CalendarView.swift */,
+				03BB0A3F256EEAB000063F69 /* DateCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -186,6 +196,9 @@
 			dependencies = (
 			);
 			name = "Make it Great";
+			packageProductDependencies = (
+				03BB0A3A256EE2B400063F69 /* JTAppleCalendar */,
+			);
 			productName = "Make it Great";
 			productReference = 03BB09342567F29900063F69 /* Make it Great.app */;
 			productType = "com.apple.product-type.application";
@@ -235,6 +248,9 @@
 				Base,
 			);
 			mainGroup = 03BB092B2567F29900063F69;
+			packageReferences = (
+				03BB0A39256EE2B400063F69 /* XCRemoteSwiftPackageReference "JTAppleCalendar" */,
+			);
 			productRefGroup = 03BB09352567F29900063F69 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -308,9 +324,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03BB0A32256EDC0900063F69 /* CalendarView.swift in Sources */,
+				03BB0A40256EEAB000063F69 /* DateCell.swift in Sources */,
 				03BB09382567F29900063F69 /* AppDelegate.swift in Sources */,
 				03BB09422567F29900063F69 /* Make_it_Great.xcdatamodeld in Sources */,
-				03BB09D5256D802600063F69 /* ViewController.swift in Sources */,
+				03BB09D5256D802600063F69 /* MonitoringViewController.swift in Sources */,
 				03BB093A2567F29900063F69 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,6 +590,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		03BB0A39256EE2B400063F69 /* XCRemoteSwiftPackageReference "JTAppleCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/patchthecode/JTAppleCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		03BB0A3A256EE2B400063F69 /* JTAppleCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03BB0A39256EE2B400063F69 /* XCRemoteSwiftPackageReference "JTAppleCalendar" */;
+			productName = JTAppleCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		03BB09402567F29900063F69 /* Make_it_Great.xcdatamodeld */ = {
