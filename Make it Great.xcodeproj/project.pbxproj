@@ -18,8 +18,12 @@
 		03BB0A32256EDC0900063F69 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB0A31256EDC0900063F69 /* CalendarView.swift */; };
 		03BB0A3B256EE2B400063F69 /* JTAppleCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 03BB0A3A256EE2B400063F69 /* JTAppleCalendar */; };
 		03BB0A40256EEAB000063F69 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB0A3F256EEAB000063F69 /* DateCell.swift */; };
+<<<<<<< HEAD
 		DE3B4F81256FE84C005FFD01 /* MonitoringStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B4F80256FE84C005FFD01 /* MonitoringStatus.swift */; };
 		DE3B4F85256FEE41005FFD01 /* GoToForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B4F84256FEE41005FFD01 /* GoToForm.swift */; };
+=======
+		03BB0A4C256FDCA400063F69 /* StackWeekLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB0A4B256FDCA400063F69 /* StackWeekLabel.swift */; };
+>>>>>>> ea6790b7f5d7e5e097205e5be942b8094fbbf06a
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,8 +56,12 @@
 		03BB09D4256D802600063F69 /* MonitoringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringViewController.swift; sourceTree = "<group>"; };
 		03BB0A31256EDC0900063F69 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		03BB0A3F256EEAB000063F69 /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
+<<<<<<< HEAD
 		DE3B4F80256FE84C005FFD01 /* MonitoringStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringStatus.swift; sourceTree = "<group>"; };
 		DE3B4F84256FEE41005FFD01 /* GoToForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoToForm.swift; sourceTree = "<group>"; };
+=======
+		03BB0A4B256FDCA400063F69 /* StackWeekLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackWeekLabel.swift; sourceTree = "<group>"; };
+>>>>>>> ea6790b7f5d7e5e097205e5be942b8094fbbf06a
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,8 +177,12 @@
 				03BB096F256C03A300063F69 /* .gitkeep */,
 				03BB0A31256EDC0900063F69 /* CalendarView.swift */,
 				03BB0A3F256EEAB000063F69 /* DateCell.swift */,
+<<<<<<< HEAD
 				DE3B4F80256FE84C005FFD01 /* MonitoringStatus.swift */,
 				DE3B4F84256FEE41005FFD01 /* GoToForm.swift */,
+=======
+				03BB0A4B256FDCA400063F69 /* StackWeekLabel.swift */,
+>>>>>>> ea6790b7f5d7e5e097205e5be942b8094fbbf06a
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -330,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03BB0A4C256FDCA400063F69 /* StackWeekLabel.swift in Sources */,
 				03BB0A32256EDC0900063F69 /* CalendarView.swift in Sources */,
 				03BB0A40256EEAB000063F69 /* DateCell.swift in Sources */,
 				03BB09382567F29900063F69 /* AppDelegate.swift in Sources */,
