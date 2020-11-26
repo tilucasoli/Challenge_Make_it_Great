@@ -18,6 +18,7 @@
 		03BB0A32256EDC0900063F69 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB0A31256EDC0900063F69 /* CalendarView.swift */; };
 		03BB0A3B256EE2B400063F69 /* JTAppleCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 03BB0A3A256EE2B400063F69 /* JTAppleCalendar */; };
 		03BB0A40256EEAB000063F69 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB0A3F256EEAB000063F69 /* DateCell.swift */; };
+		DE3B4F81256FE84C005FFD01 /* MonitoringStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B4F80256FE84C005FFD01 /* MonitoringStatus.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		03BB09D4256D802600063F69 /* MonitoringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringViewController.swift; sourceTree = "<group>"; };
 		03BB0A31256EDC0900063F69 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		03BB0A3F256EEAB000063F69 /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
+		DE3B4F80256FE84C005FFD01 /* MonitoringStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringStatus.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				03BB096F256C03A300063F69 /* .gitkeep */,
 				03BB0A31256EDC0900063F69 /* CalendarView.swift */,
 				03BB0A3F256EEAB000063F69 /* DateCell.swift */,
+				DE3B4F80256FE84C005FFD01 /* MonitoringStatus.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				03BB09382567F29900063F69 /* AppDelegate.swift in Sources */,
 				03BB09422567F29900063F69 /* Make_it_Great.xcdatamodeld in Sources */,
 				03BB09D5256D802600063F69 /* MonitoringViewController.swift in Sources */,
+				DE3B4F81256FE84C005FFD01 /* MonitoringStatus.swift in Sources */,
 				03BB093A2567F29900063F69 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
