@@ -21,12 +21,17 @@ class HumorViewController: FormTemplateViewController {
         humorContent.stressfullCard.delegate = self
 
         navigationController?.navigationBar.isHidden = false
-
+        navigationItem.largeTitleDisplayMode = .never
     }
 
     override func viewWillAppear(_ animated: Bool) {
         let navController = navigationController as? CustomNavigationController
         navController?.progressLabel.text = "1/2: Humor"
+
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
+        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+
     }
 
 }

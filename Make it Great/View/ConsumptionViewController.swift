@@ -21,7 +21,9 @@ class ConsumptionViewController: FormTemplateViewController {
 
         let backButton = UIBarButtonItem()
         backButton.title = ""
-        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+
+
     }
 }
 

@@ -24,8 +24,8 @@ class MonitoringViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .grayOne
-
-        setupUserName()
+        setupNavigationController()
+//        setupUserName()
         setupCalendarView()
         setupMonitoringStatus()
         setupGoToForm()
@@ -34,7 +34,15 @@ class MonitoringViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = true
+        let navController = navigationController as? CustomNavigationController
+        navController?.progressLabel.text = ""
+
+    }
+
+    func setupNavigationController() {
+        title = "Olá John!"
+        navigationController?.navigationBar.prefersLargeTitles = true
+
     }
 
     func setupUserName() {
@@ -52,7 +60,7 @@ class MonitoringViewController: UIViewController {
         calendarView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            calendarView.topAnchor.constraint(equalTo: userName.bottomAnchor, constant: 16),
+            calendarView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
             calendarView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
             calendarView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -34),
             calendarView.heightAnchor.constraint(equalToConstant: 267)
@@ -75,7 +83,7 @@ class MonitoringViewController: UIViewController {
         goToForm.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
-            goToForm.topAnchor.constraint(equalTo: monitoringStatus.bottomAnchor, constant: 40),
+            goToForm.topAnchor.constraint(lessThanOrEqualTo: monitoringStatus.bottomAnchor, constant: 32),
             goToForm.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
             goToForm.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20)
         ])
