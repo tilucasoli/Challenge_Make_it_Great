@@ -24,12 +24,17 @@ class MonitoringViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .grayOne
-        navigationController?.navigationBar.isHidden = true
 
         setupUserName()
         setupCalendarView()
         setupMonitoringStatus()
         setupGoToForm()
+
+        goToForm.delegate = self
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
     }
 
     func setupUserName() {
@@ -74,6 +79,13 @@ class MonitoringViewController: UIViewController {
             goToForm.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
             goToForm.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20)
         ])
+    }
+
+}
+extension MonitoringViewController: ViewPushViewControllerDelegate {
+    func pushViewController() {
+        let newVC = HumorViewController(titleText: "Como você está se sentindo hoje?", descriptionText: "Usamos esse dados para te ajudar a monitorar seu humor")
+        navigationController?.pushViewController(newVC, animated: true)
     }
 
 }

@@ -9,6 +9,8 @@ import UIKit
 
 class GoToForm: UIView {
 
+    var delegate: ViewPushViewControllerDelegate?
+
     lazy var labelTitle: UILabel = {
         let label = UILabel()
         label.text = "Tudo Bom?"
@@ -30,6 +32,7 @@ class GoToForm: UIView {
         let button = UIButton()
         button.setTitle("Adicionar", for: .normal)
         button.backgroundColor = .green
+        button.addTarget(self, action: #selector(pushAddFlow), for: .touchDown)
         return button
     }()
 
@@ -53,6 +56,12 @@ class GoToForm: UIView {
         formButton.layer.cornerRadius = 6
     }
 
+}
+
+extension GoToForm {
+    @objc func pushAddFlow() {
+        delegate?.pushViewController()
+    }
 }
 
 extension GoToForm {

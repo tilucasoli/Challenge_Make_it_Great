@@ -23,7 +23,8 @@
 		03BB0A3B256EE2B400063F69 /* JTAppleCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 03BB0A3A256EE2B400063F69 /* JTAppleCalendar */; };
 		03BB0A40256EEAB000063F69 /* DateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB0A3F256EEAB000063F69 /* DateCell.swift */; };
 		03BB0A4C256FDCA400063F69 /* StackWeekLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB0A4B256FDCA400063F69 /* StackWeekLabel.swift */; };
-		03C0FF052570645200E46B85 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 03C0FF042570645200E46B85 /* .gitkeep */; };
+		03C0FF1225707C7B00E46B85 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 03C0FF1125707C7B00E46B85 /* .gitkeep */; };
+		03C0FF1825707DC500E46B85 /* ViewPushViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C0FF1725707DC500E46B85 /* ViewPushViewControllerDelegate.swift */; };
 		DE3B4F63256E84C0005FFD01 /* HumorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B4F62256E84C0005FFD01 /* HumorViewController.swift */; };
 		DE3B4F67256E88EA005FFD01 /* ChooseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B4F66256E88EA005FFD01 /* ChooseCard.swift */; };
 		DE3B4F6B256E8E78005FFD01 /* HumorContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B4F6A256E8E78005FFD01 /* HumorContent.swift */; };
@@ -52,7 +53,6 @@
 		03BB09482567F29B00063F69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03BB096D256C03A000063F69 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		03BB096E256C03A100063F69 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		03BB096F256C03A300063F69 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		03BB0970256C03A800063F69 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		03BB0971256C03A900063F69 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		03BB09A6256D334C00063F69 /* Make it GreatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Make it GreatTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,7 +68,8 @@
 		03BB0A31256EDC0900063F69 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		03BB0A3F256EEAB000063F69 /* DateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCell.swift; sourceTree = "<group>"; };
 		03BB0A4B256FDCA400063F69 /* StackWeekLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackWeekLabel.swift; sourceTree = "<group>"; };
-		03C0FF042570645200E46B85 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; name = .gitkeep; path = "Make it Great/View/Components/.gitkeep"; sourceTree = SOURCE_ROOT; };
+		03C0FF1125707C7B00E46B85 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		03C0FF1725707DC500E46B85 /* ViewPushViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPushViewControllerDelegate.swift; sourceTree = "<group>"; };
 		DE3B4F62256E84C0005FFD01 /* HumorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumorViewController.swift; sourceTree = "<group>"; };
 		DE3B4F66256E88EA005FFD01 /* ChooseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCard.swift; sourceTree = "<group>"; };
 		DE3B4F6A256E8E78005FFD01 /* HumorContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumorContent.swift; sourceTree = "<group>"; };
@@ -120,7 +121,7 @@
 		03BB09362567F29900063F69 /* Make it Great */ = {
 			isa = PBXGroup;
 			children = (
-				03BB0960256C017200063F69 /* Protocols */,
+				03C0FF1025707C6300E46B85 /* Protocols */,
 				03BB095F256C016900063F69 /* Extensions */,
 				03BB095E256C015B00063F69 /* Persistence */,
 				03BB095D256C013E00063F69 /* View */,
@@ -183,19 +184,10 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		03BB0960256C017200063F69 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				03C0FF042570645200E46B85 /* .gitkeep */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
 		03BB0962256C01BE00063F69 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				03BB0A29256DE6FD00063F69 /* CustomNavigationController.swift */,
-				03BB096F256C03A300063F69 /* .gitkeep */,
 				03BB0A31256EDC0900063F69 /* CalendarView.swift */,
 				03BB0A3F256EEAB000063F69 /* DateCell.swift */,
 				DE3B4F80256FE84C005FFD01 /* MonitoringStatus.swift */,
@@ -231,6 +223,15 @@
 				03BB09FA256DA16C00063F69 /* Brown-Bold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		03C0FF1025707C6300E46B85 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				03C0FF1125707C7B00E46B85 /* .gitkeep */,
+				03C0FF1725707DC500E46B85 /* ViewPushViewControllerDelegate.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,7 +325,7 @@
 				03BB09472567F29B00063F69 /* LaunchScreen.storyboard in Resources */,
 				03BB0A26256DE64C00063F69 /* Assets.xcassets in Resources */,
 				03BB09FB256DA16C00063F69 /* Brown-Bold.ttf in Resources */,
-				03C0FF052570645200E46B85 /* .gitkeep in Resources */,
+				03C0FF1225707C7B00E46B85 /* .gitkeep in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +398,7 @@
 				03BB093A2567F29900063F69 /* SceneDelegate.swift in Sources */,
 				DE3B4F6B256E8E78005FFD01 /* HumorContent.swift in Sources */,
 				DE3B4F63256E84C0005FFD01 /* HumorViewController.swift in Sources */,
+				03C0FF1825707DC500E46B85 /* ViewPushViewControllerDelegate.swift in Sources */,
 				03BB0A2A256DE6FD00063F69 /* CustomNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
