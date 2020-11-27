@@ -12,7 +12,7 @@ class DateCell: JTACDayCell {
     let dayLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
-        label.textColor = #colorLiteral(red: 0.231372549, green: 0.3411764706, blue: 0.3411764706, alpha: 1)
+        label.textColor = .grayFive
         return label
     }()
 
