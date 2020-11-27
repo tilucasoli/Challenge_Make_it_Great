@@ -10,32 +10,39 @@ import UIKit
 class HumorViewController: FormTemplateViewController {
 
     let humorContent = HumorContent()
-    var customNavigationController: CustomNavigationController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addAnswerContent(contentView: humorContent)
-        customNavigationController = (self.navigationController as? CustomNavigationController)!
 
         humorContent.happyCard.delegate = self
         humorContent.sadCard.delegate = self
         humorContent.thankfullCard.delegate = self
         humorContent.stressfullCard.delegate = self
 
+        navigationController?.navigationBar.isHidden = false
+        navigationItem.largeTitleDisplayMode = .never
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        customNavigationController?.progressLabel.text = "1/2: Humor"
+        let navController = navigationController as? CustomNavigationController
+        navController?.progressLabel.text = "1/2: Humor"
+
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
+        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+
     }
+
 }
 
 extension HumorViewController: CardDelegate {
     func cardAction(title: String) {
-        print(title)
 
        let consumptionViewController = ConsumptionViewController(titleText: "Quanto você já bebeu hoje?", descriptionText: "Usamos este dado para te ajudar a estimar o quanto você consumiu!")
 
-        customNavigationController?.progressLabel.text = "2/2: Consumo"
+        let navController = navigationController as? CustomNavigationController
+        navController?.progressLabel.text = "2/2: Consumo"
 
         self.navigationController?.pushViewController(consumptionViewController, animated: true)
 
