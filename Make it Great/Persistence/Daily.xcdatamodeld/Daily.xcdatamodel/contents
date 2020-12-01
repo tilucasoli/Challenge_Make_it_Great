@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17511" systemVersion="20B29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DailyRecord" representedClassName="DailyRecord" syncable="YES" codeGenerationType="class">
+        <attribute name="day" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="mood" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="ohConsumption" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+    </entity>
+    <elements>
+        <element name="DailyRecord" positionX="-643.7438354492188" positionY="-819.8327026367188" width="128" height="74"/>
+    </elements>
+</model>
