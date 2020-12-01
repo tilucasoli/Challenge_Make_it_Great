@@ -23,7 +23,6 @@ class ConsumptionViewController: FormTemplateViewController {
         backButton.title = ""
         navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
 
-
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032292B325752CA9009B29A8 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032292B225752CA9009B29A8 /* Date.swift */; };
 		03BB09382567F29900063F69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB09372567F29900063F69 /* AppDelegate.swift */; };
 		03BB093A2567F29900063F69 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB09392567F29900063F69 /* SceneDelegate.swift */; };
 		03BB09422567F29900063F69 /* Make_it_Great.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03BB09402567F29900063F69 /* Make_it_Great.xcdatamodeld */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		032292B225752CA9009B29A8 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		03BB09342567F29900063F69 /* Make it Great.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Make it Great.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03BB09372567F29900063F69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03BB09392567F29900063F69 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				03BB096D256C03A000063F69 /* .gitkeep */,
 				03BB09F2256D9E1500063F69 /* UIColor.swift */,
 				03BB0A05256DA5C600063F69 /* UILabel.swift */,
+				032292B225752CA9009B29A8 /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				DE3B4F73256E9F73005FFD01 /* ConsumptionContent.swift in Sources */,
 				03BB09F3256D9E1500063F69 /* UIColor.swift in Sources */,
 				03BB09422567F29900063F69 /* Make_it_Great.xcdatamodeld in Sources */,
+				032292B325752CA9009B29A8 /* Date.swift in Sources */,
 				03BB09D5256D802600063F69 /* MonitoringViewController.swift in Sources */,
 				DE3B4F81256FE84C005FFD01 /* MonitoringStatus.swift in Sources */,
 				DE3B4F85256FEE41005FFD01 /* GoToForm.swift in Sources */,
