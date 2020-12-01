@@ -15,7 +15,7 @@ class CalendarView: UIView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         label.textColor = .green
-        label.text = "November"
+        label.text = "December"
         return label
     }()
 
@@ -78,14 +78,21 @@ extension CalendarView: JTACMonthViewDelegate{
     //Para que serve isso?
     func calendar(_ calendar: JTACMonthView, willDisplay cell: JTACDayCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "dateCell", for: indexPath) as? DateCell
-        cell?.dayLabel.text = cellState.text
+        cell?.configure(cellState: cellState)
     }
 
     func calendar(_ calendar: JTACMonthView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTACDayCell {
 
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "dateCell", for: indexPath)
         guard let validDateCell = cell as? DateCell else { return JTACDayCell()}
-        validDateCell.dayLabel.text = cellState.text
+
+        validDateCell.configure(cellState: cellState)
+
+        if date.getDateFormattedYearMonthDay() == Date().getDateFormattedYearMonthDay() {
+            validDateCell.highlightedViewSelectableCurrentDay()
+        } else {
+            validDateCell.highlightedViewNormalDay()
+        }
 
         hiddenOutInDates(cellState: cellState, dateCell: validDateCell)
 
@@ -100,7 +107,7 @@ extension CalendarView: JTACMonthViewDataSource {
         formatter.timeZone = Calendar.current.timeZone
         formatter.locale = Calendar.current.locale
 
-        let startDate = formatter.date(from: "2020 01 01")!
+        let startDate = formatter.date(from: "2020 12 01")!
         let endDate = formatter.date(from: "2020 12 31")!
 
         // detalhar isso
