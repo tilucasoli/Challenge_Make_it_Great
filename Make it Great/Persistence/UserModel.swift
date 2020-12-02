@@ -12,7 +12,8 @@ class UserModel {
     let coreDataStack = CoreDataStack.shared
 
     func createDaily(mood: Int, date: Date, hadDrink: Int) -> Bool {
-        let daily = Daily()
+        let entity = NSEntityDescription.entity(forEntityName: "Daily", in: coreDataStack.mainContext)!
+        let daily = Daily(entity: entity, insertInto: coreDataStack.mainContext)
         daily.mood = Int16(mood)
         daily.date = date
         daily.hadDrink = Int16(hadDrink)
@@ -61,9 +62,10 @@ class UserModel {
         dailyRequest.predicate = NSPredicate(format: "date == %@", dailyDate as CVarArg)
 
         do {
-            let dailyResults = try coreDataStack.mainContext.fetch(dailyRequest)
-            if let object = dailyResults.first {
+            let dailyResults = try coreDataStack.mainContext.fetch(Daily.fetchRequest())
+            if let object = dailyResults.first as? NSManagedObject {
                 coreDataStack.mainContext.delete(object)
+                coreDataStack.saveContext()
                 return true
             } else {
                 return false

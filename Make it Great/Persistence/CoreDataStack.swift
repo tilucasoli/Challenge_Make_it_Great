@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 
 class CoreDataStack {
-    private let modelName: String = "Alcoholits"
+    private let modelName: String = "UserConfig"
     public static let shared = CoreDataStack()
     private init() {}
 
