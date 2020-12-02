@@ -29,16 +29,6 @@ class CalendarView: UIView {
         calendarCollection.calendarDataSource = self
         calendarCollection.backgroundColor = .grayOne
         calendarCollection.register(DateCell.self, forCellWithReuseIdentifier: "dateCell")
-
-        formatter.dateFormat = "yyyy MM dd"
-        formatter.timeZone = Calendar.current.timeZone
-        formatter.locale = Calendar.current.locale
-
-        let testDate = formatter.date(from: "2020 12 03")!
-//        UserModel().createDaily(mood: 1, date: testDate, hadDrink: 3)
-        print(UserModel().deleteDaily(dailyDate: testDate))
-        print(UserModel().readDaily(actualDate: testDate))
-
         setupMonthLabel()
         setupStackWeekLabel()
         setupCalendarView()
