@@ -106,6 +106,8 @@ extension DateCell {
 
         dayLabel.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         dayLabel.textColor = .grayFive
+
+        activeRightMergeView(true)
     }
 
     func highlightedViewNormalDay() {
