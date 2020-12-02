@@ -29,7 +29,6 @@ class CalendarView: UIView {
         calendarCollection.calendarDataSource = self
         calendarCollection.backgroundColor = .grayOne
         calendarCollection.register(DateCell.self, forCellWithReuseIdentifier: "dateCell")
-
         setupMonthLabel()
         setupStackWeekLabel()
         setupCalendarView()
@@ -87,9 +86,17 @@ extension CalendarView: JTACMonthViewDelegate{
         guard let validDateCell = cell as? DateCell else { return JTACDayCell()}
 
         validDateCell.configure(cellState: cellState)
+        // Deve ir pra presenter
+        formatter.dateFormat = "yyyy MM dd"
+        formatter.timeZone = Calendar.current.timeZone
+        formatter.locale = Calendar.current.locale
+
+        let testDate = formatter.date(from: "2020 12 01")!
 
         if date.getDateFormattedYearMonthDay() == Date().getDateFormattedYearMonthDay() {
             validDateCell.highlightedViewSelectableCurrentDay()
+        } else if testDate.getDateFormattedYearMonthDay() <= date.getDateFormattedYearMonthDay() && date.getDateFormattedYearMonthDay() < Date().getDateFormattedYearMonthDay() {
+            validDateCell.highlightedViewSequenceDay()
         } else {
             validDateCell.highlightedViewNormalDay()
         }

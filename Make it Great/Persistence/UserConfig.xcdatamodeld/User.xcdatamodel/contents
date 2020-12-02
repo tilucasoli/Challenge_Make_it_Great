@@ -8,10 +8,9 @@
     <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
         <attribute name="dayLastDrink" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="usersDaily" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Daily"/>
     </entity>
     <elements>
-        <element name="Daily" positionX="-4020.626220703125" positionY="192.4821166992188" width="128" height="88"/>
-        <element name="User" positionX="-4290.547180175781" positionY="196.642578125" width="128" height="73"/>
+        <element name="Daily" positionX="-4020.626220703125" positionY="192.4821166992188" width="128" height="74"/>
+        <element name="User" positionX="-4290.547180175781" positionY="196.642578125" width="128" height="59"/>
     </elements>
 </model>
