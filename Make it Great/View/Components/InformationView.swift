@@ -17,7 +17,7 @@ class InformationView: UIView {
         return label
     }()
 
-    lazy var yourHumor:UILabel = {
+    lazy var yourHumor: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 20)
         label.textColor = .grayFive
@@ -34,7 +34,6 @@ class InformationView: UIView {
     }()
 
     let cardHumor = ChooseCard()
-
     let cardConsume = ChooseCard()
 
     override init(frame: CGRect) {
@@ -45,6 +44,9 @@ class InformationView: UIView {
         //adicionar conteúdo Mocado
         cardHumor.setContent(emoji: "😍", cardTitle: "Grato")
         cardConsume.setContent(emoji: "🥳", cardTitle: "Estou limpo!")
+
+        cardHumor.emojiView.backgroundColor = .lightGreen
+        cardConsume.emojiView.backgroundColor = .lightGreen
 
         // Adicionando SubView
         self.addSubview(infoLabel)
@@ -66,8 +68,9 @@ class InformationView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-
 }
+
+// MARK: - Constraints
 
 extension InformationView{
 
