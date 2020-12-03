@@ -14,6 +14,7 @@ class UserModel {
     func createDaily(mood: Int, date: Date, hadDrink: Int) -> Bool {
         let entity = NSEntityDescription.entity(forEntityName: "Daily", in: coreDataStack.mainContext)!
         let daily = Daily(entity: entity, insertInto: coreDataStack.mainContext)
+
         daily.mood = Int16(mood)
         daily.date = date
         daily.hadDrink = Int16(hadDrink)
@@ -43,7 +44,20 @@ class UserModel {
 
     func readDaily(actualDate: Date) -> Daily? {
         let dailyRequest: NSFetchRequest<Daily> = Daily.fetchRequest()
-        dailyRequest.predicate = NSPredicate(format: "date == %@", actualDate as CVarArg)
+
+        var calendar = Calendar.current
+        calendar.timeZone = NSTimeZone.local
+
+        let firstHourOfDate = calendar.startOfDay(for: actualDate) // eg. 2016-10-10 00:00:00
+        let firstHourOfNextDay = calendar.date(byAdding: .day, value: 1, to: firstHourOfDate)
+
+        let fromPredicate = NSPredicate(format: "date >= %@", firstHourOfDate as NSDate)
+        let toPredicate = NSPredicate(format: "date < %@", firstHourOfNextDay! as NSDate)
+        let datePredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [fromPredicate, toPredicate])
+
+        dailyRequest.predicate = datePredicate
+
+        print(dailyRequest)
 
         do {
             let dailyResults = try coreDataStack.mainContext.fetch(dailyRequest)

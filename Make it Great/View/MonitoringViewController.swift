@@ -8,6 +8,7 @@
 import UIKit
 
 class MonitoringViewController: UIViewController {
+    let monitoringPresenter = MonitoringPresenter()
 
     let userName: UILabel = {
         let label = UILabel()
@@ -82,13 +83,14 @@ class MonitoringViewController: UIViewController {
         view.addSubview(goToForm)
         goToForm.translatesAutoresizingMaskIntoConstraints = false
 
+        goToForm.isHidden = monitoringPresenter.formWasSubmited(actualDate: Date())
+
         NSLayoutConstraint.activate([
             goToForm.topAnchor.constraint(lessThanOrEqualTo: monitoringStatus.bottomAnchor, constant: 32),
             goToForm.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
             goToForm.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20)
         ])
     }
-
 }
 extension MonitoringViewController: ViewPushViewControllerDelegate {
     func pushViewController() {
