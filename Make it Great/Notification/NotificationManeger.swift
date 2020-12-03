@@ -9,30 +9,23 @@ import UIKit
 
 class NotificationManeger: NSObject {
 
-  func sendNotification(title: String, subtitile: String, body: String, badge: Int?, delayInterval: Int?) {
+  func sendNotification(title: String, body: String, delay: TimeInterval) {
     let notificationContent = UNMutableNotificationContent()
     notificationContent.title = title
-    notificationContent.subtitle = subtitile
     notificationContent.body = body
 
-    let delayTimeTrigger: UNTimeIntervalNotificationTrigger?
+    let date = Date().addingTimeInterval(delay)
+    let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+    let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
 
-    if let delay = delayInterval {
-      delayTimeTrigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(delay), repeats: false)
-    } else {
-      delayTimeTrigger = nil
-    }
-
-    if let badge = badge {
-      var currentBadgeCount = UIApplication.shared.applicationIconBadgeNumber
-      currentBadgeCount += badge
-      notificationContent.badge = NSNumber(integerLiteral: currentBadgeCount)
-    }
+    var currentBadgeCount = UIApplication.shared.applicationIconBadgeNumber
+    currentBadgeCount += 1
+    notificationContent.badge = NSNumber(integerLiteral: currentBadgeCount)
 
     notificationContent.sound = UNNotificationSound.default
     UNUserNotificationCenter.current().delegate = self
 
-    let request = UNNotificationRequest(identifier: "Test", content: notificationContent, trigger: delayTimeTrigger)
+    let request = UNNotificationRequest(identifier: "Test", content: notificationContent, trigger: trigger)
 
     UNUserNotificationCenter.current().add(request) { error in
       if let error = error {
@@ -46,7 +39,7 @@ class NotificationManeger: NSObject {
 extension NotificationManeger: UNUserNotificationCenterDelegate {
 
   func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-    completionHandler([.badge, .sound,. alert])
+      completionHandler([.badge, .sound, .alert])
   }
 
   func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
@@ -64,4 +57,3 @@ extension NotificationManeger: UNUserNotificationCenterDelegate {
     }
   }
 }
-

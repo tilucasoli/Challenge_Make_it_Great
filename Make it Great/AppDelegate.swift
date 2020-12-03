@@ -11,20 +11,35 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    private func requestNotificationAuthorization() {
-      let center  = UNUserNotificationCenter.current()
-      let options: UNAuthorizationOptions = [.alert, .badge, .sound]
+    //MARK: Notifications
 
-      center.requestAuthorization(options: options) { (granted, error) in
-        if let error = error {
-          print(error.localizedDescription)
-        }
+    func getNotificationSettings() {
+      UNUserNotificationCenter.current()
+        .getNotificationSettings { settings in
+            print("Notification settings: \(settings)")
+            guard settings.authorizationStatus == .authorized else { return }
+            DispatchQueue.main.async {
+              UIApplication.shared.registerForRemoteNotifications()
+            }
       }
+    }
+
+    func registerForPushNotifications() {
+        UNUserNotificationCenter.current()
+          .requestAuthorization(
+            options: [.alert, .sound, .badge]) { [weak self] granted, _ in
+            print("Permission granted: \(granted)")
+            guard granted else { return }
+            self?.getNotificationSettings()
+          }
     }
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        requestNotificationAuthorization()
+        registerForPushNotifications()
+        let notificatonManeger = NotificationManeger()
+
+        notificatonManeger.sendNotification(title: "Olá!", body: "Não esqueça de adicionar suas informações!", delay: 86400)
         return true
     }
 
@@ -40,6 +55,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+
+    // ⚠️ Part of PushNotification, Do not modify! ⚠️
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+      let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
+      let token = tokenParts.joined()
+      print("Device Token: \(token)")
+    }
+
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+      print("Failed to register: \(error)")
     }
 
     // MARK: - Core Data stack

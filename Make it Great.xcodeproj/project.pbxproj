@@ -79,6 +79,7 @@
 		DE3B4F80256FE84C005FFD01 /* MonitoringStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringStatus.swift; sourceTree = "<group>"; };
 		DE3B4F84256FEE41005FFD01 /* GoToForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoToForm.swift; sourceTree = "<group>"; };
 		DEE24FB12577BC68009F755C /* NotificationManeger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManeger.swift; sourceTree = "<group>"; };
+		DEE24FB72577C2F9009F755C /* Make it Great.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Make it Great.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +124,7 @@
 		03BB09362567F29900063F69 /* Make it Great */ = {
 			isa = PBXGroup;
 			children = (
+				DEE24FB72577C2F9009F755C /* Make it Great.entitlements */,
 				DEE24FB02577BC49009F755C /* Notification */,
 				03C0FF1025707C6300E46B85 /* Protocols */,
 				03BB095F256C016900063F69 /* Extensions */,
@@ -566,8 +568,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Make it Great/Make it Great.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 62NRBAKMQ3;
+				DEVELOPMENT_TEAM = VV557L4WY2;
 				INFOPLIST_FILE = "Make it Great/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -586,8 +589,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Make it Great/Make it Great.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 62NRBAKMQ3;
+				DEVELOPMENT_TEAM = VV557L4WY2;
 				INFOPLIST_FILE = "Make it Great/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
