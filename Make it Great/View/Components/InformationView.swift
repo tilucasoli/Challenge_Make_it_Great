@@ -36,6 +36,7 @@ class InformationView: UIView {
     let cardHumor = ChooseCard()
     let cardConsume = ChooseCard()
 
+    // MARK: Init
     override init(frame: CGRect) {
         super.init(frame: frame)
 
