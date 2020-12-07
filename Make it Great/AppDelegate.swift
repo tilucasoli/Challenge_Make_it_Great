@@ -12,6 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        configureForTests()
         return true
     }
 
@@ -73,4 +74,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            }
 //        }
 //    }
+
+
+    // MARK: - UI Tests Settings
+
+    private func configureForTests() {
+        if CommandLine.arguments.contains("-reset"){
+            let defaultsName = Bundle.main.bundleIdentifier!
+            UserDefaults.standard.removePersistentDomain(forName: defaultsName)
+        }
+    }
+
 }
+

@@ -30,6 +30,8 @@
 		6804E38C2575B07600000DDF /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804E38B2575B07600000DDF /* CoreDataStack.swift */; };
 		6804E3922575B19800000DDF /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804E3912575B19800000DDF /* UserModel.swift */; };
 		682EE67625790FCD002EEB09 /* MonitoringPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EE67525790FCD002EEB09 /* MonitoringPresenter.swift */; };
+		682EE682257E5302002EEB09 /* MakeItGreatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EE681257E5302002EEB09 /* MakeItGreatUITests.swift */; };
+		682EE68D257E5380002EEB09 /* InitialViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682EE68C257E5380002EEB09 /* InitialViewUITest.swift */; };
 		DE3B4F63256E84C0005FFD01 /* HumorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B4F62256E84C0005FFD01 /* HumorViewController.swift */; };
 		DE3B4F67256E88EA005FFD01 /* ChooseCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B4F66256E88EA005FFD01 /* ChooseCard.swift */; };
 		DE3B4F6B256E8E78005FFD01 /* HumorContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B4F6A256E8E78005FFD01 /* HumorContent.swift */; };
@@ -41,6 +43,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		03BB09AB256D334C00063F69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03BB092C2567F29900063F69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03BB09332567F29900063F69;
+			remoteInfo = "Make it Great";
+		};
+		682EE684257E5302002EEB09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 03BB092C2567F29900063F69 /* Project object */;
 			proxyType = 1;
@@ -80,6 +89,10 @@
 		6804E38B2575B07600000DDF /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		6804E3912575B19800000DDF /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		682EE67525790FCD002EEB09 /* MonitoringPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringPresenter.swift; sourceTree = "<group>"; };
+		682EE67F257E5302002EEB09 /* MakeItGreatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MakeItGreatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		682EE681257E5302002EEB09 /* MakeItGreatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeItGreatUITests.swift; sourceTree = "<group>"; };
+		682EE683257E5302002EEB09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		682EE68C257E5380002EEB09 /* InitialViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewUITest.swift; sourceTree = "<group>"; };
 		DE3B4F62256E84C0005FFD01 /* HumorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumorViewController.swift; sourceTree = "<group>"; };
 		DE3B4F66256E88EA005FFD01 /* ChooseCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseCard.swift; sourceTree = "<group>"; };
 		DE3B4F6A256E8E78005FFD01 /* HumorContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HumorContent.swift; sourceTree = "<group>"; };
@@ -105,6 +118,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		682EE67C257E5302002EEB09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -113,6 +133,7 @@
 			children = (
 				03BB09362567F29900063F69 /* Make it Great */,
 				03BB09A7256D334C00063F69 /* Make it GreatTests */,
+				682EE680257E5302002EEB09 /* MakeItGreatUITests */,
 				03BB09352567F29900063F69 /* Products */,
 			);
 			indentWidth = 4;
@@ -124,6 +145,7 @@
 			children = (
 				03BB09342567F29900063F69 /* Make it Great.app */,
 				03BB09A6256D334C00063F69 /* Make it GreatTests.xctest */,
+				682EE67F257E5302002EEB09 /* MakeItGreatUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -249,6 +271,16 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		682EE680257E5302002EEB09 /* MakeItGreatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				682EE681257E5302002EEB09 /* MakeItGreatUITests.swift */,
+				682EE683257E5302002EEB09 /* Info.plist */,
+				682EE68C257E5380002EEB09 /* InitialViewUITest.swift */,
+			);
+			path = MakeItGreatUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -292,6 +324,24 @@
 			productReference = 03BB09A6256D334C00063F69 /* Make it GreatTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		682EE67E257E5302002EEB09 /* MakeItGreatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 682EE688257E5302002EEB09 /* Build configuration list for PBXNativeTarget "MakeItGreatUITests" */;
+			buildPhases = (
+				682EE67B257E5302002EEB09 /* Sources */,
+				682EE67C257E5302002EEB09 /* Frameworks */,
+				682EE67D257E5302002EEB09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				682EE685257E5302002EEB09 /* PBXTargetDependency */,
+			);
+			name = MakeItGreatUITests;
+			productName = MakeItGreatUITests;
+			productReference = 682EE67F257E5302002EEB09 /* MakeItGreatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -305,6 +355,10 @@
 						CreatedOnToolsVersion = 12.2;
 					};
 					03BB09A5256D334C00063F69 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = 03BB09332567F29900063F69;
+					};
+					682EE67E257E5302002EEB09 = {
 						CreatedOnToolsVersion = 12.2;
 						TestTargetID = 03BB09332567F29900063F69;
 					};
@@ -328,6 +382,7 @@
 			targets = (
 				03BB09332567F29900063F69 /* Make it Great */,
 				03BB09A5256D334C00063F69 /* Make it GreatTests */,
+				682EE67E257E5302002EEB09 /* MakeItGreatUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -345,6 +400,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		03BB09A4256D334C00063F69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		682EE67D257E5302002EEB09 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -431,6 +493,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		682EE67B257E5302002EEB09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				682EE682257E5302002EEB09 /* MakeItGreatUITests.swift in Sources */,
+				682EE68D257E5380002EEB09 /* InitialViewUITest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -438,6 +509,11 @@
 			isa = PBXTargetDependency;
 			target = 03BB09332567F29900063F69 /* Make it Great */;
 			targetProxy = 03BB09AB256D334C00063F69 /* PBXContainerItemProxy */;
+		};
+		682EE685257E5302002EEB09 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03BB09332567F29900063F69 /* Make it Great */;
+			targetProxy = 682EE684257E5302002EEB09 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -649,6 +725,46 @@
 			};
 			name = Release;
 		};
+		682EE686257E5302002EEB09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 78HCYJFJ6W;
+				INFOPLIST_FILE = MakeItGreatUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = karol.MakeItGreatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Make it Great";
+			};
+			name = Debug;
+		};
+		682EE687257E5302002EEB09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 78HCYJFJ6W;
+				INFOPLIST_FILE = MakeItGreatUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = karol.MakeItGreatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Make it Great";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -675,6 +791,15 @@
 			buildConfigurations = (
 				03BB09AE256D334C00063F69 /* Debug */,
 				03BB09AF256D334C00063F69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		682EE688257E5302002EEB09 /* Build configuration list for PBXNativeTarget "MakeItGreatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				682EE686257E5302002EEB09 /* Debug */,
+				682EE687257E5302002EEB09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
