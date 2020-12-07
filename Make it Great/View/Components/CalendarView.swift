@@ -22,6 +22,7 @@ class CalendarView: UIView {
     let stackWeekLabels = StackWeekLabel()
     let calendarCollection = JTACMonthView()
     let formatter = DateFormatter()
+    let presenter = MonitoringPresenter()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -86,6 +87,7 @@ extension CalendarView: JTACMonthViewDelegate{
         guard let validDateCell = cell as? DateCell else { return JTACDayCell()}
 
         validDateCell.configure(cellState: cellState)
+        
         // Deve ir pra presenter
         formatter.dateFormat = "yyyy MM dd"
         formatter.timeZone = Calendar.current.timeZone
@@ -95,9 +97,11 @@ extension CalendarView: JTACMonthViewDelegate{
 
         if date.getDateFormattedYearMonthDay() == Date().getDateFormattedYearMonthDay() {
             validDateCell.highlightedViewSelectableCurrentDay()
-        } else if testDate.getDateFormattedYearMonthDay() <= date.getDateFormattedYearMonthDay() && date.getDateFormattedYearMonthDay() < Date().getDateFormattedYearMonthDay() {
+        }
+        else if presenter.areYouDrunk(in: date) {
             validDateCell.highlightedViewSequenceDay()
-        } else {
+        }
+        else {
             validDateCell.highlightedViewNormalDay()
         }
 

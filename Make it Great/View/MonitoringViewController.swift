@@ -8,6 +8,7 @@
 import UIKit
 
 class MonitoringViewController: UIViewController {
+    let presenter = MonitoringPresenter()
 
     let userName: UILabel = {
         let label = UILabel()
@@ -18,7 +19,7 @@ class MonitoringViewController: UIViewController {
     }()
 
     let calendarView = CalendarView()
-    let monitoringStatus = MonitoringStatus()
+    lazy var monitoringStatus = MonitoringStatus(lastDayDrunk: presenter.requestDaysWithoutDrunk())
     let goToForm = GoToForm()
 
     override func viewDidLoad() {
@@ -29,20 +30,21 @@ class MonitoringViewController: UIViewController {
         setupCalendarView()
         setupMonitoringStatus()
         setupGoToForm()
-
         goToForm.delegate = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
         let navController = navigationController as? CustomNavigationController
         navController?.progressLabel.text = ""
-
     }
 
+    func hideGotoForm() {
+        goToForm.isHidden = presenter.existsDaily()
+    }
+    
     func setupNavigationController() {
-        title = "Olá John!"
+        title = "Olá Jones!"
         navigationController?.navigationBar.prefersLargeTitles = true
-
     }
 
     func setupUserName() {
@@ -82,18 +84,18 @@ class MonitoringViewController: UIViewController {
         view.addSubview(goToForm)
         goToForm.translatesAutoresizingMaskIntoConstraints = false
 
+        goToForm.isHidden = presenter.formWasSubmited(actualDate: Date())
+
         NSLayoutConstraint.activate([
             goToForm.topAnchor.constraint(lessThanOrEqualTo: monitoringStatus.bottomAnchor, constant: 32),
             goToForm.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
             goToForm.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20)
         ])
     }
-
 }
 extension MonitoringViewController: ViewPushViewControllerDelegate {
     func pushViewController() {
         let newVC = HumorViewController(titleText: "Como você está se sentindo hoje?", descriptionText: "Usamos esse dados para te ajudar a monitorar seu humor")
         navigationController?.pushViewController(newVC, animated: true)
     }
-
 }

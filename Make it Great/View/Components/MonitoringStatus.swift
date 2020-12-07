@@ -9,14 +9,14 @@ import UIKit
 
 class MonitoringStatus: UIView {
 
-    lazy var emojiLabel: UILabel = {
+    let emojiLabel: UILabel = {
         let label = UILabel()
         label.text = "🥳"
         label.font = UIFont.systemFont(ofSize: 27)
         return label
     }()
 
-    lazy var messageLabel: UILabel = {
+    let messageLabel: UILabel = {
         let label = UILabel()
         label.text = "Parabéns! Você está limpo há"
         label.font = UIFont.systemFont(ofSize: 16)
@@ -24,22 +24,22 @@ class MonitoringStatus: UIView {
         return label
     }()
 
-    lazy var daysLabel: UILabel = {
+    let daysLabel: UILabel = {
         let label = UILabel()
-        label.text = "7 dias"
         label.font = UIFont(name: "Brown-Bold", size: 27)
         label.textColor = .grayFive
         return label
     }()
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init(lastDayDrunk: String) {
+        super.init(frame: CGRect())
 
         self.addSubview(emojiLabel)
         self.addSubview(messageLabel)
         self.addSubview(daysLabel)
-
         self.setUpLabels()
+
+        daysLabel.text = lastDayDrunk
     }
 
     required init?(coder: NSCoder) {

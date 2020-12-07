@@ -17,8 +17,11 @@ class ConsumptionContent: UIView {
         super.init(frame: frame)
         
         cleanCard.setContent(emoji: "🥳", cardTitle: "Estou limpo!")
+        cleanCard.indice = 1
         fewCard.setContent(emoji: "🥃", cardTitle: "Um pouco")
+        fewCard.indice = 2
         lotCard.setContent(emoji: "🍺", cardTitle: "Bastante")
+        lotCard.indice = 3
 
         self.addSubview(cleanCard)
         self.addSubview(fewCard)

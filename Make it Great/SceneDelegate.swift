@@ -9,17 +9,18 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
+    //var viewController = MonitoringViewController()
 
     func scene(_ scene: UIScene, willConnectTo _: UISceneSession, options _: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
-      
-      window = UIWindow(windowScene: windowScene)
 
-      window?.rootViewController = CustomNavigationController(rootViewController: MonitoringViewController())
-      window?.makeKeyAndVisible()
+        window = UIWindow(windowScene: windowScene)
+        UserModel().createUser(name: "Lucas", dayLastDrink: Date())
+        window?.rootViewController = CustomNavigationController(rootViewController: MonitoringViewController())
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_: UIScene) {
@@ -33,6 +34,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         UIApplication.shared.applicationIconBadgeNumber = 0
         // Called when the scene has moved from an inactive state to an active state.
         // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+        //viewController.hideGotoForm()
     }
 
     func sceneWillResignActive(_: UIScene) {
