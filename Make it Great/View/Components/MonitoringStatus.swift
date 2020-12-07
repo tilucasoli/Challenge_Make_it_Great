@@ -70,7 +70,8 @@ extension MonitoringStatus {
         NSLayoutConstraint.activate([
             daysLabel.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: 6),
             daysLabel.leftAnchor.constraint(equalTo: emojiLabel.rightAnchor, constant: 21),
-            daysLabel.rightAnchor.constraint(equalTo: self.rightAnchor)
+            daysLabel.rightAnchor.constraint(equalTo: self.rightAnchor),
+            
         ])
     }
 }
