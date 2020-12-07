@@ -26,6 +26,8 @@
 		03BB0A4C256FDCA400063F69 /* StackWeekLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB0A4B256FDCA400063F69 /* StackWeekLabel.swift */; };
 		03C0FF1225707C7B00E46B85 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 03C0FF1125707C7B00E46B85 /* .gitkeep */; };
 		03C0FF1825707DC500E46B85 /* ViewPushViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C0FF1725707DC500E46B85 /* ViewPushViewControllerDelegate.swift */; };
+		1A18073625792169005B3309 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A18073525792169005B3309 /* InformationViewController.swift */; };
+		1AAB0FE8257917FB0095454E /* InformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB0FE7257917FB0095454E /* InformationView.swift */; };
 		6804E37B2575283B00000DDF /* UserConfig.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6804E3792575283B00000DDF /* UserConfig.xcdatamodeld */; };
 		6804E38C2575B07600000DDF /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804E38B2575B07600000DDF /* CoreDataStack.swift */; };
 		6804E3922575B19800000DDF /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804E3912575B19800000DDF /* UserModel.swift */; };
@@ -76,6 +78,8 @@
 		03BB0A4B256FDCA400063F69 /* StackWeekLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackWeekLabel.swift; sourceTree = "<group>"; };
 		03C0FF1125707C7B00E46B85 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		03C0FF1725707DC500E46B85 /* ViewPushViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPushViewControllerDelegate.swift; sourceTree = "<group>"; };
+		1A18073525792169005B3309 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		1AAB0FE7257917FB0095454E /* InformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationView.swift; sourceTree = "<group>"; };
 		6804E37A2575283B00000DDF /* User.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = User.xcdatamodel; sourceTree = "<group>"; };
 		6804E38B2575B07600000DDF /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		6804E3912575B19800000DDF /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 				03BB09D4256D802600063F69 /* MonitoringViewController.swift */,
 				DE3B4F62256E84C0005FFD01 /* HumorViewController.swift */,
 				DE3B4F6E256E9F44005FFD01 /* ConsumptionViewController.swift */,
+				1A18073525792169005B3309 /* InformationViewController.swift */,
 				03BB09E9256D94E900063F69 /* Templates */,
 				03BB0962256C01BE00063F69 /* Components */,
 			);
@@ -204,6 +209,7 @@
 		03BB0962256C01BE00063F69 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1AAB0FE7257917FB0095454E /* InformationView.swift */,
 				03BB0A29256DE6FD00063F69 /* CustomNavigationController.swift */,
 				03BB0A31256EDC0900063F69 /* CalendarView.swift */,
 				03BB0A3F256EEAB000063F69 /* DateCell.swift */,
@@ -415,6 +421,7 @@
 				03BB09EB256D951700063F69 /* FormTemplateViewController.swift in Sources */,
 				DE3B4F67256E88EA005FFD01 /* ChooseCard.swift in Sources */,
 				DE3B4F6F256E9F44005FFD01 /* ConsumptionViewController.swift in Sources */,
+				1AAB0FE8257917FB0095454E /* InformationView.swift in Sources */,
 				DE3B4F73256E9F73005FFD01 /* ConsumptionContent.swift in Sources */,
 				6804E3922575B19800000DDF /* UserModel.swift in Sources */,
 				03BB09F3256D9E1500063F69 /* UIColor.swift in Sources */,
@@ -425,6 +432,7 @@
 				DE3B4F81256FE84C005FFD01 /* MonitoringStatus.swift in Sources */,
 				DE3B4F85256FEE41005FFD01 /* GoToForm.swift in Sources */,
 				03BB093A2567F29900063F69 /* SceneDelegate.swift in Sources */,
+				1A18073625792169005B3309 /* InformationViewController.swift in Sources */,
 				DE3B4F6B256E8E78005FFD01 /* HumorContent.swift in Sources */,
 				6804E38C2575B07600000DDF /* CoreDataStack.swift in Sources */,
 				DE3B4F63256E84C0005FFD01 /* HumorViewController.swift in Sources */,
