@@ -11,6 +11,11 @@ class MonitoringPresenter {
 
     let coreDataManager = UserModel()
     let user: User
+    var userNameCongratulation: String {
+        get {
+            return "Olá, \(user.name!)!"
+        }
+    }
     var dayWithoutDrunkString: String {
         get {
             return "\(requestDaysWithoutDrunk()) dias!"
