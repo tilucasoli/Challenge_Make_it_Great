@@ -26,6 +26,10 @@
 		03BB0A4C256FDCA400063F69 /* StackWeekLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB0A4B256FDCA400063F69 /* StackWeekLabel.swift */; };
 		03C0FF1225707C7B00E46B85 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 03C0FF1125707C7B00E46B85 /* .gitkeep */; };
 		03C0FF1825707DC500E46B85 /* ViewPushViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C0FF1725707DC500E46B85 /* ViewPushViewControllerDelegate.swift */; };
+		03C5F0E5257E7175002AF6D3 /* InputNameOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5F0E4257E7175002AF6D3 /* InputNameOnboardingViewController.swift */; };
+		03C5F0ED257E76AF002AF6D3 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5F0EC257E76AF002AF6D3 /* UITextField.swift */; };
+		03C5F0F7257E7F89002AF6D3 /* IntroductionOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C5F0F6257E7F89002AF6D3 /* IntroductionOnboardingViewController.swift */; };
+		03FF00C6257E5F5800CF2A72 /* OnboardingTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FF00C5257E5F5800CF2A72 /* OnboardingTemplate.swift */; };
 		6804E37B2575283B00000DDF /* UserConfig.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6804E3792575283B00000DDF /* UserConfig.xcdatamodeld */; };
 		6804E38C2575B07600000DDF /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804E38B2575B07600000DDF /* CoreDataStack.swift */; };
 		6804E3922575B19800000DDF /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6804E3912575B19800000DDF /* UserModel.swift */; };
@@ -76,6 +80,10 @@
 		03BB0A4B256FDCA400063F69 /* StackWeekLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackWeekLabel.swift; sourceTree = "<group>"; };
 		03C0FF1125707C7B00E46B85 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		03C0FF1725707DC500E46B85 /* ViewPushViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPushViewControllerDelegate.swift; sourceTree = "<group>"; };
+		03C5F0E4257E7175002AF6D3 /* InputNameOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputNameOnboardingViewController.swift; sourceTree = "<group>"; };
+		03C5F0EC257E76AF002AF6D3 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		03C5F0F6257E7F89002AF6D3 /* IntroductionOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionOnboardingViewController.swift; sourceTree = "<group>"; };
+		03FF00C5257E5F5800CF2A72 /* OnboardingTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTemplate.swift; sourceTree = "<group>"; };
 		6804E37A2575283B00000DDF /* User.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = User.xcdatamodel; sourceTree = "<group>"; };
 		6804E38B2575B07600000DDF /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		6804E3912575B19800000DDF /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
@@ -171,6 +179,8 @@
 				03BB09D4256D802600063F69 /* MonitoringViewController.swift */,
 				DE3B4F62256E84C0005FFD01 /* HumorViewController.swift */,
 				DE3B4F6E256E9F44005FFD01 /* ConsumptionViewController.swift */,
+				03C5F0E4257E7175002AF6D3 /* InputNameOnboardingViewController.swift */,
+				03C5F0F6257E7F89002AF6D3 /* IntroductionOnboardingViewController.swift */,
 				03BB09E9256D94E900063F69 /* Templates */,
 				03BB0962256C01BE00063F69 /* Components */,
 			);
@@ -195,6 +205,7 @@
 				03BB09F2256D9E1500063F69 /* UIColor.swift */,
 				03BB0A05256DA5C600063F69 /* UILabel.swift */,
 				032292B225752CA9009B29A8 /* Date.swift */,
+				03C5F0EC257E76AF002AF6D3 /* UITextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -228,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				03BB09EA256D951700063F69 /* FormTemplateViewController.swift */,
+				03FF00C5257E5F5800CF2A72 /* OnboardingTemplate.swift */,
 			);
 			path = Templates;
 			sourceTree = "<group>";
@@ -414,11 +426,15 @@
 				DE3B4F81256FE84C005FFD01 /* MonitoringStatus.swift in Sources */,
 				DE3B4F85256FEE41005FFD01 /* GoToForm.swift in Sources */,
 				03BB093A2567F29900063F69 /* SceneDelegate.swift in Sources */,
+				03C5F0F7257E7F89002AF6D3 /* IntroductionOnboardingViewController.swift in Sources */,
 				682EE67625790FCD002EEB09 /* MonitoringPresenter.swift in Sources */,
 				DE3B4F6B256E8E78005FFD01 /* HumorContent.swift in Sources */,
 				6804E38C2575B07600000DDF /* CoreDataStack.swift in Sources */,
+				03C5F0E5257E7175002AF6D3 /* InputNameOnboardingViewController.swift in Sources */,
+				03C5F0ED257E76AF002AF6D3 /* UITextField.swift in Sources */,
 				DE3B4F63256E84C0005FFD01 /* HumorViewController.swift in Sources */,
 				03C0FF1825707DC500E46B85 /* ViewPushViewControllerDelegate.swift in Sources */,
+				03FF00C6257E5F5800CF2A72 /* OnboardingTemplate.swift in Sources */,
 				03BB0A2A256DE6FD00063F69 /* CustomNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
