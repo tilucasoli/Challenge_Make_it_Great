@@ -15,13 +15,28 @@ class InitialViewUITest: XCTestCase {
         app.launch()
 
         let _ = XCUIApplication()
-        app.buttons["Adicionar"].tap()
-        app.staticTexts["😆"].tap()
-        app.staticTexts["🥳"].tap()
+
+        let firstButton = app.buttons["Adicionar"]
+        XCTAssertTrue(firstButton.isHittable)
+        firstButton.tap()
+
+        let secondButton = app.staticTexts["😆"]
+        XCTAssertTrue(secondButton.isHittable)
+        secondButton.tap()
+
+        let lastButton = app.staticTexts["🥳"]
+        XCTAssertTrue(lastButton.isHittable)
+        lastButton.tap()
 
         let olJohnNavigationBar = app.navigationBars["Olá John!"]
-        olJohnNavigationBar.buttons["Back"].tap()
-        olJohnNavigationBar.buttons["Olá John!"].tap()
+
+        let backButtonPage2 = olJohnNavigationBar.buttons["Back"]
+        XCTAssertTrue(backButtonPage2.isHittable)
+        backButtonPage2.tap()
+
+        let backButtonPage1 = olJohnNavigationBar.buttons["Olá John!"]
+        XCTAssertTrue(backButtonPage1.isHittable)
+        backButtonPage1.tap()
 
     }
 }
