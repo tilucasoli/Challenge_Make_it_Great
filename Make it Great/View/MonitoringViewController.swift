@@ -8,7 +8,7 @@
 import UIKit
 
 class MonitoringViewController: UIViewController {
-    let monitoringPresenter = MonitoringPresenter()
+    let presenter = MonitoringPresenter()
 
     let userName: UILabel = {
         let label = UILabel()
@@ -19,7 +19,7 @@ class MonitoringViewController: UIViewController {
     }()
 
     let calendarView = CalendarView()
-    let monitoringStatus = MonitoringStatus()
+    let monitoringStatus = MonitoringStatus(lastDayDrunk: "7")
     let goToForm = GoToForm()
 
     override func viewDidLoad() {
@@ -30,7 +30,7 @@ class MonitoringViewController: UIViewController {
         setupCalendarView()
         setupMonitoringStatus()
         setupGoToForm()
-
+        presenter.requestDaysWithoutDrunk()
         goToForm.delegate = self
     }
 
@@ -41,7 +41,7 @@ class MonitoringViewController: UIViewController {
     }
 
     func setupNavigationController() {
-        title = "Olá John!"
+        title = "Olá Jones!"
         navigationController?.navigationBar.prefersLargeTitles = true
 
     }
@@ -83,7 +83,7 @@ class MonitoringViewController: UIViewController {
         view.addSubview(goToForm)
         goToForm.translatesAutoresizingMaskIntoConstraints = false
 
-        goToForm.isHidden = monitoringPresenter.formWasSubmited(actualDate: Date())
+        goToForm.isHidden = presenter.formWasSubmited(actualDate: Date())
 
         NSLayoutConstraint.activate([
             goToForm.topAnchor.constraint(lessThanOrEqualTo: monitoringStatus.bottomAnchor, constant: 32),

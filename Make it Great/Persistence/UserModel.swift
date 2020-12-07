@@ -11,13 +11,12 @@ import CoreData
 class UserModel {
     let coreDataStack = CoreDataStack.shared
 
-    func createDaily(mood: Int, date: Date, hadDrink: Int) -> Bool {
-        let entity = NSEntityDescription.entity(forEntityName: "Daily", in: coreDataStack.mainContext)!
-        let daily = Daily(entity: entity, insertInto: coreDataStack.mainContext)
+    func createUser(name: String, dayLastDrink: Date) -> Bool {
+        let entity = NSEntityDescription.entity(forEntityName: "User", in: coreDataStack.mainContext)!
+        let user = User(entity: entity, insertInto: coreDataStack.mainContext)
 
-        daily.mood = Int16(mood)
-        daily.date = date
-        daily.hadDrink = Int16(hadDrink)
+        user.name = name
+        user.dayLastDrink = dayLastDrink
 
         do {
             try coreDataStack.mainContext.save()
@@ -28,10 +27,27 @@ class UserModel {
         }
     }
 
-    func createUser(name: String, dayLastDrink: Date) -> Bool {
-        let user = User()
-        user.name = name
-        user.dayLastDrink = dayLastDrink
+    func readUser() -> User? {
+        let userRequest: NSFetchRequest<User> = User.fetchRequest()
+
+        do {
+            let userArray = try coreDataStack.mainContext.fetch(userRequest)
+            let user = userArray.first
+            try coreDataStack.mainContext.save()
+            return user
+        } catch let error as NSError {
+            print(error)
+            return nil
+        }
+    }
+
+    func createDaily(mood: Int, date: Date, hadDrink: Int) -> Bool {
+        let entity = NSEntityDescription.entity(forEntityName: "Daily", in: coreDataStack.mainContext)!
+        let daily = Daily(entity: entity, insertInto: coreDataStack.mainContext)
+
+        daily.mood = Int16(mood)
+        daily.date = date
+        daily.hadDrink = Int16(hadDrink)
 
         do {
             try coreDataStack.mainContext.save()
