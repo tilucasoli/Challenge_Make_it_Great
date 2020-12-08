@@ -88,6 +88,13 @@ extension CalendarView: JTACMonthViewDelegate{
 
         validDateCell.configure(cellState: cellState)
         
+        // Deve ir pra presenter
+        formatter.dateFormat = "yyyy MM dd"
+        formatter.timeZone = Calendar.current.timeZone
+        formatter.locale = Calendar.current.locale
+
+        let testDate = formatter.date(from: "2020 12 01")!
+
         if date.getDateFormattedYearMonthDay() == Date().getDateFormattedYearMonthDay() {
             validDateCell.highlightedViewSelectableCurrentDay()
         }

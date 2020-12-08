@@ -37,9 +37,10 @@ class HumorViewController: FormTemplateViewController {
 }
 
 extension HumorViewController: CardDelegate {
-    func cardAction(title: String) {
+    func cardAction(indice: Int) {
 
-       let consumptionViewController = ConsumptionViewController(titleText: "Quanto você já bebeu hoje?", descriptionText: "Usamos este dado para te ajudar a estimar o quanto você consumiu!")
+        let consumptionViewController = ConsumptionViewController(titleText: "Quanto você já bebeu hoje?", descriptionText: "Usamos este dado para te ajudar a estimar o quanto você consumiu!")
+        consumptionViewController.humor = indice
 
         let navController = navigationController as? CustomNavigationController
         navController?.progressLabel.text = "2/2: Consumo"

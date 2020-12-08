@@ -8,10 +8,12 @@
 import UIKit
 
 protocol CardDelegate {
-    func cardAction(title: String)
+    func cardAction(indice: Int)
 }
 
 class ChooseCard: UIView {
+
+    var indice: Int?
 
     lazy var emojiView: UIView = {
         let view = UIView()
@@ -57,7 +59,7 @@ class ChooseCard: UIView {
 
     @objc func cardAction() {
         //print("Clicou no card \(self.cardTitle.text!)!")
-        self.delegate?.cardAction(title: self.cardTitle.text!)
+        self.delegate?.cardAction(indice: indice!)
     }
 
     override func layoutSubviews() {
