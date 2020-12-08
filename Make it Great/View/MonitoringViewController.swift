@@ -10,11 +10,11 @@ import UIKit
 class MonitoringViewController: UIViewController {
     let presenter = MonitoringPresenter()
 
-    let userName: UILabel = {
+    lazy var userName: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Brown-Bold", size: 32)
         label.textColor = .grayThree
-        label.text = "Olá John!"
+        label.text = presenter.userNameCongratulation
         return label
     }()
 
@@ -44,7 +44,7 @@ class MonitoringViewController: UIViewController {
     }
     
     func setupNavigationController() {
-        title = "Olá Jones!"
+        title = presenter.userNameCongratulation
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 
