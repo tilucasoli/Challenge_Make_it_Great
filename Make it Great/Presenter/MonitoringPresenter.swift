@@ -11,6 +11,11 @@ class MonitoringPresenter {
 
     let coreDataManager = UserModel()
     let user: User
+    var dayWithoutDrunkString: String {
+        get {
+            return "\(requestDaysWithoutDrunk()) dias!"
+        }
+    }
 
     init() {
         user = coreDataManager.readUser()!
@@ -23,12 +28,12 @@ class MonitoringPresenter {
         return false
     }
 
-    func requestDaysWithoutDrunk() -> String {
+    func requestDaysWithoutDrunk() -> Int {
         let diff = Int(Date().timeIntervalSince1970 - user.dayLastDrink!.timeIntervalSince1970)
         let hours = diff / 3600
         let days = hours / 24
 
-        return "\(days) dias!"
+        return days
     }
 
     func requestUserName() -> String {
