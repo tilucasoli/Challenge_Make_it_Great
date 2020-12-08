@@ -11,6 +11,7 @@ class InputNameOnboardingViewController: OnboardingTemplateViewController {
     let textField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Ex: Jones"
+        textField.attributedPlaceholder = NSAttributedString(string: "Ex: Jones", attributes: [NSAttributedString.Key.foregroundColor : UIColor.grayThree.withAlphaComponent(0.3)])
         textField.font = .systemFont(ofSize: 17, weight: .medium)
         textField.textColor = UIColor.grayThree.withAlphaComponent(0.5)
         textField.backgroundColor = UIColor.lightGreen.withAlphaComponent(0.3)
@@ -18,6 +19,14 @@ class InputNameOnboardingViewController: OnboardingTemplateViewController {
         textField.setLeftPadding(16)
         textField.keyboardType = .default
         return textField
+    }()
+
+    let alertController: UIAlertController = {
+        let alertController = UIAlertController(title: "Nome inválido", message: "Ops! provávelmente você esqueceu de inserir seu nome", preferredStyle: .alert)
+
+        let okAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+
+        return alertController
     }()
     
     override func viewDidLoad() {
@@ -27,7 +36,7 @@ class InputNameOnboardingViewController: OnboardingTemplateViewController {
         let gesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(gesture)
 
-        nextButton.addTarget(self, action: #selector(pushMonitoringViewController), for: .touchDown)
+        nextButton.addTarget(self, action: #selector(saveAndPush), for: .touchDown)
     }
 
     func setupTextField() {
@@ -50,9 +59,22 @@ extension InputNameOnboardingViewController {
         self.view.endEditing(true)
     }
 
-    @objc func pushMonitoringViewController(){
+    func pushMonitoringViewController(){
         let newViewController = MonitoringViewController()
         self.navigationController?.pushViewController(newViewController, animated: true)
+    }
+
+    @objc func saveAndPush(){
+        saveUser(name: textField.text)
+        pushMonitoringViewController()
+    }
+
+    func saveUser(name: String?) {
+        guard let nameValid = name else {
+            present(alertController, animated: true, completion: nil)
+            return
+        }
+        UserModel().createUser(name: nameValid, dayLastDrink: Date())
     }
 
 }

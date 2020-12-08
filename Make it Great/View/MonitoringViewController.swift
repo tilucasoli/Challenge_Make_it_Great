@@ -25,6 +25,9 @@ class MonitoringViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .grayOne
+
+        navigationItem.hidesBackButton = true
+
         setupNavigationController()
 //        setupUserName()
         setupCalendarView()

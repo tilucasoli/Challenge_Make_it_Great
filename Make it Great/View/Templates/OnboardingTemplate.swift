@@ -53,6 +53,8 @@ class OnboardingTemplateViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         view.backgroundColor = .grayOne
 
         titleLabel.setLineHeight(lineHeightMultiple: 1.22)
@@ -68,7 +70,8 @@ class OnboardingTemplateViewController: UIViewController {
     init(emoji: String, title: String, description: String) {
         super.init(nibName: nil, bundle: nil)
 
-        navigationController?.navigationBar.prefersLargeTitles = false
+
+
 
         emojiLabel.text = emoji
         titleLabel.text = title
