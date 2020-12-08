@@ -39,9 +39,6 @@ class MonitoringViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         let navController = navigationController as? CustomNavigationController
         navController?.progressLabel.text = ""
-    }
-
-    func hideGotoForm() {
         goToForm.isHidden = presenter.existsDaily()
     }
     
