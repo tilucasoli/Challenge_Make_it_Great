@@ -10,16 +10,16 @@ import UIKit
 class MonitoringViewController: UIViewController {
     let presenter = MonitoringPresenter()
 
-    let userName: UILabel = {
+    lazy var userName: UILabel = {
         let label = UILabel()
         label.font = UIFont(name: "Brown-Bold", size: 32)
         label.textColor = .grayThree
-        label.text = "Olá John!"
+        label.text = presenter.userNameCongratulation
         return label
     }()
 
     let calendarView = CalendarView()
-    lazy var monitoringStatus = MonitoringStatus(lastDayDrunk: presenter.requestDaysWithoutDrunk())
+    lazy var monitoringStatus = MonitoringStatus(lastDayDrunk: presenter.dayWithoutDrunkString)
     let goToForm = GoToForm()
 
     override func viewDidLoad() {
@@ -48,7 +48,7 @@ class MonitoringViewController: UIViewController {
     }
     
     func setupNavigationController() {
-        title = "Olá Jones!"
+        title = presenter.userNameCongratulation
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 
@@ -78,10 +78,12 @@ class MonitoringViewController: UIViewController {
         view.addSubview(monitoringStatus)
         monitoringStatus.translatesAutoresizingMaskIntoConstraints = false
 
+        monitoringStatus.isHidden = presenter.requestDaysWithoutDrunk() == 0
+
         NSLayoutConstraint.activate([
             monitoringStatus.topAnchor.constraint(equalTo: calendarView.bottomAnchor, constant: 24),
             monitoringStatus.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
-            monitoringStatus.heightAnchor.constraint(equalToConstant: 51)
+            monitoringStatus.heightAnchor.constraint(equalToConstant: 55)
         ])
     }
 
@@ -91,11 +93,20 @@ class MonitoringViewController: UIViewController {
 
         goToForm.isHidden = presenter.formWasSubmited(actualDate: Date())
 
-        NSLayoutConstraint.activate([
-            goToForm.topAnchor.constraint(lessThanOrEqualTo: monitoringStatus.bottomAnchor, constant: 32),
-            goToForm.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
-            goToForm.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20)
-        ])
+        if monitoringStatus.isHidden {
+            NSLayoutConstraint.activate([
+                goToForm.topAnchor.constraint(lessThanOrEqualTo: calendarView.bottomAnchor, constant: 32),
+                goToForm.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
+                goToForm.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20)
+            ])
+        } else {
+            NSLayoutConstraint.activate([
+                goToForm.topAnchor.constraint(lessThanOrEqualTo: monitoringStatus.bottomAnchor, constant: 32),
+                goToForm.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20),
+                goToForm.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -20)
+            ])
+        }
+
     }
 }
 extension MonitoringViewController: ViewPushViewControllerDelegate {
