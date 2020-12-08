@@ -59,9 +59,11 @@ extension InputNameOnboardingViewController {
         self.view.endEditing(true)
     }
 
-    func pushMonitoringViewController(){
+    func pushMonitoringViewController() {
         let newViewController = MonitoringViewController()
-        self.navigationController?.pushViewController(newViewController, animated: true)
+        let navigation = CustomNavigationController(rootViewController: newViewController)
+        navigation.modalPresentationStyle = .fullScreen
+        self.navigationController?.present(navigation, animated: true)
     }
 
     @objc func saveAndPush(){
