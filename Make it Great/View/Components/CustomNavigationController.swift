@@ -18,6 +18,7 @@ class CustomNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        overrideUserInterfaceStyle = .light
         setupLargeTitleApperance()
         setupVisualNavigationController()
         setupProgressLabel()
