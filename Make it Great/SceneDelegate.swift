@@ -18,8 +18,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         window = UIWindow(windowScene: windowScene)
-        UserModel().createUser(name: "Lucas", dayLastDrink: Date())
-        window?.rootViewController = CustomNavigationController(rootViewController: MonitoringViewController())
+        
+        if let validUser = UserModel().readUser() {
+            window?.rootViewController = CustomNavigationController(rootViewController:MonitoringViewController())
+        } else {
+            window?.rootViewController = CustomNavigationController(rootViewController: IntroductionOnboardingViewController(emoji: "😊", title: "Vamos começar essa jornada juntos!", description: "Estaremos unidos para te ajudar a monitorar a sua evolução nessa sua decisão diária em manter-se limpo do álcool."))
+        }
+
         window?.makeKeyAndVisible()
     }
 
