@@ -57,4 +57,8 @@ class MonitoringPresenter {
     func getDaily(date: Date) -> Daily? {
         return coreDataManager.readDaily(actualDate: date)
     }
+
+    func deleteDaily(date: Date) -> Bool {
+        return coreDataManager.deleteDaily(dailyDate: date)
+    }
 }

@@ -40,6 +40,7 @@ class MonitoringViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         let navController = navigationController as? CustomNavigationController
         navController?.progressLabel.text = ""
+        hideGotoForm()
     }
 
     func hideGotoForm() {
@@ -98,10 +99,12 @@ class MonitoringViewController: UIViewController {
     }
 }
 extension MonitoringViewController: ViewPushViewControllerDelegate {
+
     func pushInformationViewController(date: Date) {
         if let daily = presenter.getDaily(date: date) {
             let informationController = InformationViewController()
             informationController.daily = daily
+            informationController.delegate = self
             let navigation = UINavigationController(rootViewController: informationController)
             navigation.overrideUserInterfaceStyle = .light
             navigationController?.present(navigation, animated: true)
@@ -113,5 +116,14 @@ extension MonitoringViewController: ViewPushViewControllerDelegate {
     func pushFormViewController() {
         let newVC = HumorViewController(titleText: "Como você está se sentindo hoje?", descriptionText: "Usamos esse dados para te ajudar a monitorar seu humor")
         navigationController?.pushViewController(newVC, animated: true)
+    }
+
+    func deleteDaily(date: Date) -> Bool{
+        if presenter.deleteDaily(date: date) {
+            hideGotoForm()
+            return true
+        } else {
+            return false
+        }
     }
 }
