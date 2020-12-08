@@ -8,5 +8,6 @@
 import UIKit
 
 protocol ViewPushViewControllerDelegate: UIViewController {
-    func pushViewController()
+    func pushFormViewController()
+    func pushInformationViewController(date: Date)
 }

@@ -60,7 +60,7 @@ class GoToForm: UIView {
 
 extension GoToForm {
     @objc func pushAddFlow() {
-        delegate?.pushViewController()
+        delegate?.pushFormViewController()
     }
 }
 

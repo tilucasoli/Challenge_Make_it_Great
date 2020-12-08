@@ -34,6 +34,7 @@ class MonitoringViewController: UIViewController {
         setupMonitoringStatus()
         setupGoToForm()
         goToForm.delegate = self
+        calendarView.delegate = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -97,7 +98,19 @@ class MonitoringViewController: UIViewController {
     }
 }
 extension MonitoringViewController: ViewPushViewControllerDelegate {
-    func pushViewController() {
+    func pushInformationViewController(date: Date) {
+        if let daily = presenter.getDaily(date: date) {
+            let informationController = InformationViewController()
+            informationController.daily = daily
+            let navigation = UINavigationController(rootViewController: informationController)
+            navigation.overrideUserInterfaceStyle = .light
+            navigationController?.present(navigation, animated: true)
+        } else {
+            print("Sem daily!")
+        }
+    }
+
+    func pushFormViewController() {
         let newVC = HumorViewController(titleText: "Como você está se sentindo hoje?", descriptionText: "Usamos esse dados para te ajudar a monitorar seu humor")
         navigationController?.pushViewController(newVC, animated: true)
     }

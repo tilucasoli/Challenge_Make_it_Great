@@ -23,6 +23,7 @@ class CalendarView: UIView {
     let calendarCollection = JTACMonthView()
     let formatter = DateFormatter()
     let presenter = MonitoringPresenter()
+    var delegate: ViewPushViewControllerDelegate?
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -108,6 +109,10 @@ extension CalendarView: JTACMonthViewDelegate{
         hiddenOutInDates(cellState: cellState, dateCell: validDateCell)
 
         return cell
+    }
+
+    func calendar(_ calendar: JTACMonthView, didSelectDate date: Date, cell: JTACDayCell?, cellState: CellState, indexPath: IndexPath) {
+        delegate?.pushInformationViewController(date: date)
     }
 
 }
