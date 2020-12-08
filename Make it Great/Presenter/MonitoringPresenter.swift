@@ -53,4 +53,8 @@ class MonitoringPresenter {
             return false
         }
     }
+
+    func getDaily(date: Date) -> Daily? {
+        return coreDataManager.readDaily(actualDate: date)
+    }
 }

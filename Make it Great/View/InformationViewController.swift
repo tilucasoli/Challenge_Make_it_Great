@@ -10,6 +10,7 @@ import UIKit
 class InformationViewController: UIViewController {
     // View
     let informationView = InformationView()
+    var daily: Daily?
 
     // Right Navigation Button
     lazy var buttonDelete: UIBarButtonItem = {
@@ -49,6 +50,8 @@ class InformationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationController()
+        configureMood()
+        configureConsume()
     }
 
     // MARK: Functions
@@ -59,6 +62,34 @@ class InformationViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17, weight: .semibold)
         ]
+    }
+
+    func configureMood() {
+        switch daily!.mood {
+        case 1:
+            informationView.cardHumor.setContent(emoji: "😆", cardTitle: "Muito Feliz")
+        case 2:
+            informationView.cardHumor.setContent(emoji: "😍", cardTitle: "Grato")
+        case 3:
+            informationView.cardHumor.setContent(emoji: "😆", cardTitle: "Muito Feliz")
+        case 4:
+            informationView.cardHumor.setContent(emoji: "😤", cardTitle: "Estressado")
+        default:
+            return
+        }
+    }
+
+    func configureConsume() {
+        switch daily!.hadDrink {
+        case 1:
+            informationView.cardConsume.setContent(emoji: "🥳", cardTitle: "Estou limpo!")
+        case 2:
+            informationView.cardConsume.setContent(emoji: "🥃", cardTitle: "Um pouco")
+        case 3:
+            informationView.cardConsume.setContent(emoji: "🍺", cardTitle: "Bastante")
+        default:
+            return
+        }
     }
 }
 
