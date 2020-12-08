@@ -45,7 +45,12 @@ class InformationViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = informationView
-        title = "03-12-2020"
+        if let date = daily?.date {
+            let today = date
+            let formatter1 = DateFormatter()
+            formatter1.dateFormat = "dd-MM-yyyy"
+            title = formatter1.string(from: today)
+        }
     }
 
     override func viewDidLoad() {
