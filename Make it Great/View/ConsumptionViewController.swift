@@ -10,6 +10,8 @@ import UIKit
 class ConsumptionViewController: FormTemplateViewController {
 
     let consumptionContent = ConsumptionContent()
+    let presenter = MonitoringPresenter()
+    var humor: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,12 +24,13 @@ class ConsumptionViewController: FormTemplateViewController {
         let backButton = UIBarButtonItem()
         backButton.title = ""
         navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
-
     }
 }
 
 extension ConsumptionViewController: CardDelegate {
-    func cardAction(title: String) {
-        print(title)
+    func cardAction(indice: Int) {
+        if presenter.saveDaily(mood: humor!, hadDrunk: indice) {
+            navigationController?.popToRootViewController(animated: true)
+        }
     }
 }

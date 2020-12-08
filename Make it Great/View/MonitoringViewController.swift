@@ -19,7 +19,7 @@ class MonitoringViewController: UIViewController {
     }()
 
     let calendarView = CalendarView()
-    let monitoringStatus = MonitoringStatus(lastDayDrunk: "7")
+    lazy var monitoringStatus = MonitoringStatus(lastDayDrunk: presenter.requestDaysWithoutDrunk())
     let goToForm = GoToForm()
 
     override func viewDidLoad() {
@@ -30,20 +30,21 @@ class MonitoringViewController: UIViewController {
         setupCalendarView()
         setupMonitoringStatus()
         setupGoToForm()
-        presenter.requestDaysWithoutDrunk()
         goToForm.delegate = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
         let navController = navigationController as? CustomNavigationController
         navController?.progressLabel.text = ""
-
     }
 
+    func hideGotoForm() {
+        goToForm.isHidden = presenter.existsDaily()
+    }
+    
     func setupNavigationController() {
         title = "Olá Jones!"
         navigationController?.navigationBar.prefersLargeTitles = true
-
     }
 
     func setupUserName() {
@@ -97,5 +98,4 @@ extension MonitoringViewController: ViewPushViewControllerDelegate {
         let newVC = HumorViewController(titleText: "Como você está se sentindo hoje?", descriptionText: "Usamos esse dados para te ajudar a monitorar seu humor")
         navigationController?.pushViewController(newVC, animated: true)
     }
-
 }

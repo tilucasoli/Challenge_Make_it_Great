@@ -13,9 +13,9 @@ class MonitoringPresenter {
     let user: User
 
     init() {
-        
         user = coreDataManager.readUser()!
     }
+
     func formWasSubmited(actualDate: Date) -> Bool {
         if let _ = UserModel().readDaily(actualDate: actualDate) {
             return true
@@ -23,9 +23,12 @@ class MonitoringPresenter {
         return false
     }
 
-    func requestDaysWithoutDrunk() -> Date? {
-        print(user.dayLastDrink?.timeIntervalSinceNow)
-        return user.dayLastDrink
+    func requestDaysWithoutDrunk() -> String {
+        let diff = Int(Date().timeIntervalSince1970 - user.dayLastDrink!.timeIntervalSince1970)
+        let hours = diff / 3600
+        let days = hours / 24
+
+        return "\(days) dias!"
     }
 
     func requestUserName() -> String {
@@ -37,5 +40,17 @@ class MonitoringPresenter {
             return true
         }
         return false
+    }
+
+    func saveDaily(mood: Int, hadDrunk: Int) -> Bool {
+        return coreDataManager.createDaily(mood: mood, date: Date(), hadDrink: hadDrunk)
+    }
+
+    func existsDaily() -> Bool {
+        if let _ = coreDataManager.readDaily(actualDate: Date()) {
+            return true
+        } else {
+            return false
+        }
     }
 }
