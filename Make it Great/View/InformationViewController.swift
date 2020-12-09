@@ -75,11 +75,11 @@ class InformationViewController: UIViewController {
         case 1:
             informationView.cardHumor.setContent(emoji: "😆", cardTitle: "Muito Feliz")
         case 2:
-            informationView.cardHumor.setContent(emoji: "😍", cardTitle: "Grato")
+            informationView.cardHumor.setContent(emoji: "😍", cardTitle: "Grato(a)")
         case 3:
             informationView.cardHumor.setContent(emoji: "😆", cardTitle: "Muito Feliz")
         case 4:
-            informationView.cardHumor.setContent(emoji: "😤", cardTitle: "Estressado")
+            informationView.cardHumor.setContent(emoji: "😤", cardTitle: "Estressado(a)")
         default:
             return
         }
@@ -88,7 +88,7 @@ class InformationViewController: UIViewController {
     func configureConsume() {
         switch daily!.hadDrink {
         case 1:
-            informationView.cardConsume.setContent(emoji: "🥳", cardTitle: "Estou limpo!")
+            informationView.cardConsume.setContent(emoji: "🥳", cardTitle: "Estou limpo(a)!")
         case 2:
             informationView.cardConsume.setContent(emoji: "🥃", cardTitle: "Um pouco")
         case 3:

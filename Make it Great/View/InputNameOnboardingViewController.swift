@@ -33,6 +33,10 @@ class InputNameOnboardingViewController: OnboardingTemplateViewController, UITex
         super.viewDidLoad()
         setupTextField()
 
+        let backButton = UIBarButtonItem()
+        backButton.title = ""
+        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+
         let gesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(gesture)
 
@@ -79,8 +83,10 @@ extension InputNameOnboardingViewController {
     }
 
     @objc func saveAndPush(){
-        saveUser(name: textField.text)
-        pushMonitoringViewController()
+        if textField.text != ""{
+            saveUser(name: textField.text)
+            pushMonitoringViewController()
+        }
     }
 
     func saveUser(name: String?) {

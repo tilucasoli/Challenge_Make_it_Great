@@ -42,10 +42,6 @@ class InformationView: UIView {
 
         self.backgroundColor = .grayOne
 
-        //adicionar conteúdo Mocado
-        cardHumor.setContent(emoji: "😍", cardTitle: "Grato")
-        cardConsume.setContent(emoji: "🥳", cardTitle: "Estou limpo!")
-
         cardHumor.emojiView.backgroundColor = .lightGreen
         cardConsume.emojiView.backgroundColor = .lightGreen
 

@@ -16,7 +16,7 @@ class ConsumptionContent: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        cleanCard.setContent(emoji: "🥳", cardTitle: "Estou limpo!")
+        cleanCard.setContent(emoji: "🥳", cardTitle: "Estou limpo(a)!")
         cleanCard.indice = 1
         fewCard.setContent(emoji: "🥃", cardTitle: "Um pouco")
         fewCard.indice = 2
@@ -53,7 +53,7 @@ extension ConsumptionContent {
         fewCard.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             fewCard.heightAnchor.constraint(equalToConstant: 148),
-            fewCard.widthAnchor.constraint(equalToConstant: 131),
+            fewCard.widthAnchor.constraint(equalToConstant: 136),
             fewCard.topAnchor.constraint(equalTo: cleanCard.bottomAnchor, constant: 24),
             fewCard.leftAnchor.constraint(equalTo: self.leftAnchor)
         ])
@@ -63,7 +63,7 @@ extension ConsumptionContent {
         lotCard.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             lotCard.heightAnchor.constraint(equalToConstant: 148),
-            lotCard.widthAnchor.constraint(equalToConstant: 131),
+            lotCard.widthAnchor.constraint(equalToConstant: 136),
             lotCard.topAnchor.constraint(equalTo: cleanCard.bottomAnchor, constant: 24),
             lotCard.rightAnchor.constraint(equalTo: self.rightAnchor)
         ])
