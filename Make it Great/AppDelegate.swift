@@ -36,9 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        configureForTests()
         registerForPushNotifications()
         let notificatonManeger = NotificationManeger()
-
         notificatonManeger.sendNotification(title: "Olá!", body: "Não esqueça de adicionar suas informações!", delay: 86400)
         return true
     }
@@ -113,3 +113,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
 //    }
 }
+
+    // MARK: - UI Test Setting
+
+private func configureForTests() {
+         if CommandLine.arguments.contains("-reset"){
+            if let defaultsName = Bundle.main.bundleIdentifier {
+             UserDefaults.standard.removePersistentDomain(forName: defaultsName)
+            } else { return }
+         }
+     }
