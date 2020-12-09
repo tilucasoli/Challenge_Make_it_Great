@@ -10,4 +10,5 @@ import UIKit
 protocol ViewPushViewControllerDelegate: UIViewController {
     func pushFormViewController()
     func pushInformationViewController(date: Date)
+    func deleteDaily(date: Date) -> Bool
 }

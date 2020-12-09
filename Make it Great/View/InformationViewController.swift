@@ -11,6 +11,7 @@ class InformationViewController: UIViewController {
     // View
     let informationView = InformationView()
     var daily: Daily?
+    var delegate: ViewPushViewControllerDelegate?
 
     // Right Navigation Button
     lazy var buttonDelete: UIBarButtonItem = {
@@ -44,7 +45,12 @@ class InformationViewController: UIViewController {
     override func loadView() {
         super.loadView()
         view = informationView
-        title = "03-12-2020"
+        if let date = daily?.date {
+            let today = date
+            let formatter1 = DateFormatter()
+            formatter1.dateFormat = "dd-MM-yyyy"
+            title = formatter1.string(from: today)
+        }
     }
 
     override func viewDidLoad() {
@@ -97,11 +103,27 @@ class InformationViewController: UIViewController {
 
 extension InformationViewController {
     @objc func deleteAction() {
-        print("Testando Delete")
+        showSimpleAlert()
     }
 
     @objc func doneAction() {
         print("Testando Done")
         self.dismiss(animated: true, completion: nil)
+    }
+
+    func showSimpleAlert() {
+        let alert = UIAlertController(title: "Deletar daily?", message: "Você tem certeza que quer deletar a daily?",         preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Cancelar", style: .default, handler: { _ in
+            //Cancel Action
+        }))
+
+        alert.addAction(UIAlertAction(title: "Deletar", style: .destructive, handler: {(_: UIAlertAction!) in
+            if self.delegate!.deleteDaily(date: (self.daily?.date)!) {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }))
+
+        self.present(alert, animated: true, completion: nil)
     }
 }

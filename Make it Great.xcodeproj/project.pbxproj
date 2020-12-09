@@ -43,6 +43,7 @@
 		DE3B4F73256E9F73005FFD01 /* ConsumptionContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B4F72256E9F73005FFD01 /* ConsumptionContent.swift */; };
 		DE3B4F81256FE84C005FFD01 /* MonitoringStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B4F80256FE84C005FFD01 /* MonitoringStatus.swift */; };
 		DE3B4F85256FEE41005FFD01 /* GoToForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B4F84256FEE41005FFD01 /* GoToForm.swift */; };
+		DEC22318257FC0C800CE8F13 /* UIAlertController+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC22317257FC0C800CE8F13 /* UIAlertController+Style.swift */; };
 		DEE24FB22577BC68009F755C /* NotificationManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE24FB12577BC68009F755C /* NotificationManeger.swift */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,7 @@
 		DE3B4F72256E9F73005FFD01 /* ConsumptionContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionContent.swift; sourceTree = "<group>"; };
 		DE3B4F80256FE84C005FFD01 /* MonitoringStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringStatus.swift; sourceTree = "<group>"; };
 		DE3B4F84256FEE41005FFD01 /* GoToForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoToForm.swift; sourceTree = "<group>"; };
+		DEC22317257FC0C800CE8F13 /* UIAlertController+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Style.swift"; sourceTree = "<group>"; };
 		DEE24FB12577BC68009F755C /* NotificationManeger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManeger.swift; sourceTree = "<group>"; };
 		DEE24FB72577C2F9009F755C /* Make it Great.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Make it Great.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -216,6 +218,7 @@
 				03BB0A05256DA5C600063F69 /* UILabel.swift */,
 				032292B225752CA9009B29A8 /* Date.swift */,
 				03C5F0EC257E76AF002AF6D3 /* UITextField.swift */,
+				DEC22317257FC0C800CE8F13 /* UIAlertController+Style.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				6804E3922575B19800000DDF /* UserModel.swift in Sources */,
 				03BB09F3256D9E1500063F69 /* UIColor.swift in Sources */,
 				DEE24FB22577BC68009F755C /* NotificationManeger.swift in Sources */,
+				DEC22318257FC0C800CE8F13 /* UIAlertController+Style.swift in Sources */,
 				03BB09422567F29900063F69 /* Make_it_Great.xcdatamodeld in Sources */,
 				032292B325752CA9009B29A8 /* Date.swift in Sources */,
 				03BB09D5256D802600063F69 /* MonitoringViewController.swift in Sources */,
