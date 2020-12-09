@@ -68,6 +68,7 @@ extension InputNameOnboardingViewController {
 
     @objc func dismissKeyboard() {
         self.view.endEditing(true)
+        view.frame.origin.y = 0
     }
 
     func pushMonitoringViewController(){
