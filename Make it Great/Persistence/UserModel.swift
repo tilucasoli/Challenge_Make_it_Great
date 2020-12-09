@@ -73,7 +73,7 @@ class UserModel {
 
         dailyRequest.predicate = datePredicate
 
-        print(dailyRequest)
+        //print(dailyRequest)
 
         do {
             let dailyResults = try coreDataStack.mainContext.fetch(dailyRequest)
@@ -92,8 +92,8 @@ class UserModel {
         dailyRequest.predicate = NSPredicate(format: "date == %@", dailyDate as CVarArg)
 
         do {
-            let dailyResults = try coreDataStack.mainContext.fetch(Daily.fetchRequest())
-            if let object = dailyResults.first as? NSManagedObject {
+            let dailyResults = try coreDataStack.mainContext.fetch(dailyRequest)
+            if let object = dailyResults.first {
                 coreDataStack.mainContext.delete(object)
                 coreDataStack.saveContext()
                 return true
