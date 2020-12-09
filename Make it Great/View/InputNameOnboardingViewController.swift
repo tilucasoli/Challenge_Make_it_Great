@@ -7,7 +7,7 @@
 
 import UIKit
 
-class InputNameOnboardingViewController: OnboardingTemplateViewController {
+class InputNameOnboardingViewController: OnboardingTemplateViewController, UITextFieldDelegate {
     let textField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Ex: Jones"
@@ -37,6 +37,17 @@ class InputNameOnboardingViewController: OnboardingTemplateViewController {
         view.addGestureRecognizer(gesture)
 
         nextButton.addTarget(self, action: #selector(saveAndPush), for: .touchDown)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillChange(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+    }
+
+    deinit {
+
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
     }
 
     func setupTextField() {
@@ -57,6 +68,7 @@ extension InputNameOnboardingViewController {
 
     @objc func dismissKeyboard() {
         self.view.endEditing(true)
+        view.frame.origin.y = 0
     }
 
     func pushMonitoringViewController() {
@@ -79,4 +91,11 @@ extension InputNameOnboardingViewController {
         UserModel().createUser(name: nameValid, dayLastDrink: Date())
     }
 
+}
+
+extension InputNameOnboardingViewController{
+
+    @objc func keyboardWillChange(notification: Notification){
+        view.frame.origin.y = -250
+    }
 }
