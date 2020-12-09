@@ -46,7 +46,7 @@ extension HumorContent {
         happyCard.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             happyCard.heightAnchor.constraint(equalToConstant: 148),
-            happyCard.widthAnchor.constraint(equalToConstant: 131),
+            happyCard.widthAnchor.constraint(equalToConstant: 136),
             happyCard.topAnchor.constraint(equalTo: self.topAnchor),
             happyCard.leftAnchor.constraint(equalTo: self.leftAnchor)
         ])
@@ -56,7 +56,7 @@ extension HumorContent {
         thankfullCard.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             thankfullCard.heightAnchor.constraint(equalToConstant: 148),
-            thankfullCard.widthAnchor.constraint(equalToConstant: 131),
+            thankfullCard.widthAnchor.constraint(equalToConstant: 136),
             thankfullCard.topAnchor.constraint(equalTo: self.topAnchor),
             thankfullCard.rightAnchor.constraint(equalTo: self.rightAnchor)
         ])
@@ -66,7 +66,7 @@ extension HumorContent {
         sadCard.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             sadCard.heightAnchor.constraint(equalToConstant: 148),
-            sadCard.widthAnchor.constraint(equalToConstant: 131),
+            sadCard.widthAnchor.constraint(equalToConstant: 136),
             sadCard.topAnchor.constraint(equalTo: happyCard.bottomAnchor, constant: 24),
             sadCard.leftAnchor.constraint(equalTo: self.leftAnchor)
         ])
@@ -76,7 +76,7 @@ extension HumorContent {
         stressfullCard.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             stressfullCard.heightAnchor.constraint(equalToConstant: 148),
-            stressfullCard.widthAnchor.constraint(equalToConstant: 131),
+            stressfullCard.widthAnchor.constraint(equalToConstant: 136),
             stressfullCard.topAnchor.constraint(equalTo: thankfullCard.bottomAnchor, constant: 24),
             stressfullCard.rightAnchor.constraint(equalTo: self.rightAnchor)
         ])
