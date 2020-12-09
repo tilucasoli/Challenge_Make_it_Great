@@ -18,11 +18,11 @@ class HumorContent: UIView {
         super.init(frame: frame)
         happyCard.setContent(emoji: "😆", cardTitle: "Muito Feliz")
         happyCard.indice = 1
-        thankfullCard.setContent(emoji: "😍", cardTitle: "Grato")
+        thankfullCard.setContent(emoji: "😍", cardTitle: "Grato(a)")
         thankfullCard.indice = 2
         sadCard.setContent(emoji: "😞", cardTitle: "Muito Triste")
         sadCard.indice = 3
-        stressfullCard.setContent(emoji: "😤", cardTitle: "Estressado")
+        stressfullCard.setContent(emoji: "😤", cardTitle: "Estressado(a)")
         stressfullCard.indice = 4
 
         self.addSubview(happyCard)

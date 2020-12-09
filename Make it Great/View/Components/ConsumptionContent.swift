@@ -16,7 +16,7 @@ class ConsumptionContent: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        cleanCard.setContent(emoji: "🥳", cardTitle: "Estou limpo!")
+        cleanCard.setContent(emoji: "🥳", cardTitle: "Estou limpo(a)!")
         cleanCard.indice = 1
         fewCard.setContent(emoji: "🥃", cardTitle: "Um pouco")
         fewCard.indice = 2

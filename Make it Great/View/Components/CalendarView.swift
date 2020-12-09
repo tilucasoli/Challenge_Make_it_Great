@@ -15,7 +15,7 @@ class CalendarView: UIView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         label.textColor = .green
-        label.text = "December"
+        label.text = "Dezembro"
         return label
     }()
 
