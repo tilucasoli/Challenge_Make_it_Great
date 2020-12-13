@@ -45,6 +45,7 @@
 		DE3B4F73256E9F73005FFD01 /* ConsumptionContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B4F72256E9F73005FFD01 /* ConsumptionContent.swift */; };
 		DE3B4F81256FE84C005FFD01 /* MonitoringStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B4F80256FE84C005FFD01 /* MonitoringStatus.swift */; };
 		DE3B4F85256FEE41005FFD01 /* GoToForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3B4F84256FEE41005FFD01 /* GoToForm.swift */; };
+		DE93F8C32585550200E96E25 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE93F8C22585550200E96E25 /* PresentationController.swift */; };
 		DEC22318257FC0C800CE8F13 /* UIAlertController+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC22317257FC0C800CE8F13 /* UIAlertController+Style.swift */; };
 		DEE24FB22577BC68009F755C /* NotificationManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE24FB12577BC68009F755C /* NotificationManeger.swift */; };
 /* End PBXBuildFile section */
@@ -114,6 +115,7 @@
 		DE3B4F72256E9F73005FFD01 /* ConsumptionContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumptionContent.swift; sourceTree = "<group>"; };
 		DE3B4F80256FE84C005FFD01 /* MonitoringStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringStatus.swift; sourceTree = "<group>"; };
 		DE3B4F84256FEE41005FFD01 /* GoToForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoToForm.swift; sourceTree = "<group>"; };
+		DE93F8C22585550200E96E25 /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		DEC22317257FC0C800CE8F13 /* UIAlertController+Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Style.swift"; sourceTree = "<group>"; };
 		DEE24FB12577BC68009F755C /* NotificationManeger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManeger.swift; sourceTree = "<group>"; };
 		DEE24FB72577C2F9009F755C /* Make it Great.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Make it Great.entitlements"; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				03C5F0E4257E7175002AF6D3 /* InputNameOnboardingViewController.swift */,
 				03C5F0F6257E7F89002AF6D3 /* IntroductionOnboardingViewController.swift */,
 				1A18073525792169005B3309 /* InformationViewController.swift */,
+				DE93F8C22585550200E96E25 /* PresentationController.swift */,
 				03BB09E9256D94E900063F69 /* Templates */,
 				03BB0962256C01BE00063F69 /* Components */,
 			);
@@ -507,6 +510,7 @@
 				6804E3922575B19800000DDF /* UserModel.swift in Sources */,
 				03BB09F3256D9E1500063F69 /* UIColor.swift in Sources */,
 				DEE24FB22577BC68009F755C /* NotificationManeger.swift in Sources */,
+				DE93F8C32585550200E96E25 /* PresentationController.swift in Sources */,
 				DEC22318257FC0C800CE8F13 /* UIAlertController+Style.swift in Sources */,
 				03BB09422567F29900063F69 /* Make_it_Great.xcdatamodeld in Sources */,
 				032292B325752CA9009B29A8 /* Date.swift in Sources */,
@@ -695,6 +699,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Make it Great/Make it Great.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = VV557L4WY2;
 				INFOPLIST_FILE = "Make it Great/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -703,7 +708,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "Apple-academy.Make-it-Great";
+				PRODUCT_BUNDLE_IDENTIFIER = "Apple-academy.Make-it-Great-elias";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -717,6 +722,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Make it Great/Make it Great.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = VV557L4WY2;
 				INFOPLIST_FILE = "Make it Great/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -725,7 +731,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "Apple-academy.Make-it-Great";
+				PRODUCT_BUNDLE_IDENTIFIER = "Apple-academy.Make-it-Great-elias";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

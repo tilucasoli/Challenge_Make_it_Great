@@ -12,6 +12,8 @@ class InformationViewController: UIViewController {
     let informationView = InformationView()
     var daily: Daily?
     var delegate: ViewPushViewControllerDelegate?
+    var hasSetPointOrigin = false
+    var pointOrigin: CGPoint?
 
     // Right Navigation Button
     lazy var buttonDelete: UIBarButtonItem = {
@@ -58,6 +60,15 @@ class InformationViewController: UIViewController {
         setupNavigationController()
         configureMood()
         configureConsume()
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerAction))
+        navigationController?.view.addGestureRecognizer(panGesture)
+    }
+
+    override func viewDidLayoutSubviews() {
+      if !hasSetPointOrigin {
+        hasSetPointOrigin = true
+        pointOrigin = self.navigationController?.view.frame.origin
+      }
     }
 
     // MARK: Functions
@@ -68,6 +79,7 @@ class InformationViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.font : UIFont.systemFont(ofSize: 17, weight: .semibold)
         ]
+        self.navigationController?.navigationBar.sizeToFit()
     }
 
     func configureMood() {
@@ -125,5 +137,28 @@ extension InformationViewController {
         }))
 
         self.present(alert, animated: true, completion: nil)
+    }
+
+    @objc func panGestureRecognizerAction(sender: UIPanGestureRecognizer) {
+      let translation = sender.translation(in: view)
+
+      // not allowing the user to drag the view upaward.
+      guard translation.y >= 0 else { return }
+
+      // setting x as 0 because we don't want user to move the frame side ways! only want straight up and down.
+      self.navigationController?.view.frame.origin = CGPoint(x: 0, y: pointOrigin!.y + translation.y)
+
+      if sender.state == .ended {
+        let dragVelocity = sender.velocity(in: view)
+        if dragVelocity.y >= 1300 {
+          dismiss(animated: true, completion: nil)
+        } else {
+          // set back to original position
+          UIView.animate(withDuration: 0.3) {
+            self.navigationController?.view.frame.origin = self.pointOrigin ?? CGPoint(x: 0, y: 400)
+
+          }
+        }
+      }
     }
 }
