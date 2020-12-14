@@ -8,6 +8,7 @@
 import UIKit
 
 class InputNameOnboardingViewController: OnboardingTemplateViewController, UITextFieldDelegate {
+
     let textField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "Ex: Jones"
@@ -99,9 +100,11 @@ extension InputNameOnboardingViewController {
 
 }
 
-extension InputNameOnboardingViewController{
+extension InputNameOnboardingViewController {
 
-    @objc func keyboardWillChange(notification: Notification){
-        view.frame.origin.y = -250
+    @objc func keyboardWillChange(notification: Notification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            view.frame.origin.y = -keyboardSize.height
+        }
     }
 }

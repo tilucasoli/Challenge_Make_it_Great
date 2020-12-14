@@ -132,7 +132,7 @@ class OnboardingTemplateViewController: UIViewController {
         view.addSubview(nextButton)
 
         NSLayoutConstraint.activate([
-            nextButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -24),
+            nextButton.bottomAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -24),
             nextButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -40),
             nextButton.heightAnchor.constraint(equalToConstant: 65),
             nextButton.widthAnchor.constraint(equalToConstant: 190)
