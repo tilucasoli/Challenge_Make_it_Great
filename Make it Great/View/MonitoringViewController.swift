@@ -118,6 +118,8 @@ extension MonitoringViewController: ViewPushViewControllerDelegate {
             informationController.delegate = self
             let navigation = UINavigationController(rootViewController: informationController)
             navigation.overrideUserInterfaceStyle = .light
+            navigation.modalPresentationStyle = .custom
+            navigation.transitioningDelegate = self
             navigationController?.present(navigation, animated: true)
         } else {
             print("Sem daily!")
@@ -137,4 +139,10 @@ extension MonitoringViewController: ViewPushViewControllerDelegate {
             return false
         }
     }
+}
+
+extension MonitoringViewController: UIViewControllerTransitioningDelegate {
+  func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+    PresentationController(presentedViewController: presented, presenting: presenting)
+  }
 }
